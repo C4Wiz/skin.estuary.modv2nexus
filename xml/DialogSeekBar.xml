@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<visible>$EXP[isSeeking] | [Player.Paused + !Skin.HasSetting(Hide_OSDInfo)] | Player.ShowInfo | Player.ShowTime | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)</visible>
+	<visible>![Window.IsActive(sliderdialog) | Window.IsActive(pvrosdchannels) | Window.IsVisible(1135) | Window.IsActive(1141)]</visible>
+	<visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
+	<include>Animation_BottomSlide</include>
+	<depth>DepthOSD</depth>
+	<zorder>0</zorder>
+	<controls>
+		<include>PVRChannelNumberInput</include>
+		<control type="group">
+			<animation effect="slide" end="0,-140" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31476])">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31479])">Conditional</animation>
+			<animation effect="slide" end="0,-131.5" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31475])">Conditional</animation>
+			<animation effect="slide" end="0,-21" time="0" condition="Window.IsVisible(fullscreenvideo) + Skin.HasSetting(ScopeMode) + String.IsEqual(Skin.String(scope_mode),$LOCALIZE[31478])">Conditional</animation>
+			<include content="SeekBar" condition="Skin.HasSetting(ShowSeekBar) + $EXP[isSeeking]">
+				<param name="top">990</param>
+			</include>
+			<include condition="Player.HasAudio + !Player.HasVideo">OSDWithInfo</include>
+			<include condition="!$EXP[isSeeking] + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
+			<include condition="!Skin.HasSetting(ShowSeekBar) + !Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithInfo</include>
+			<include condition="!$EXP[isSeeking] + Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithoutInfo</include>
+			<include condition="!Skin.HasSetting(ShowSeekBar) + Skin.HasSetting(SmallOSDVideo) + Window.IsVisible(fullscreenvideo) + !Window.IsActive(fullscreeninfo)">OSDWithoutInfo</include>
+		</control>
+	</controls>
+</window>
