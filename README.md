@@ -4,12 +4,11 @@
 
 ## Installation Notes ##
 
-It's strongly recommended to install the skin via the "Kodinerds Repo", as this is the only way to guarantee that additional 
-required modules (e.g. the PVR Artwork Module) are also installed. Another advantage is that you get automatic updates when 
-you install an addon from a repository and not from ZIP.
+The "Kodinerds Repo", Must be installed manually so the required PVR Artwork Module (If you use the PVR Function) can be installed, and other usefull addons from the Kodi Nerds Repo.
 
-To install the Kodinerds repository visit the page "https://repo.kodinerds.net", download the repository zip (red button) 
-and install it. After that you can install the skin directly from the repository under "Look & Feel", "Skins".
+Kodi Nerds Repo is available from my repo. Additional Addon's can be used by Installing the "Rector Stuff Repo"
+
+Non Installable Addon's will be hidden in SkinSettings till the Repos are Installed.
 
 ### File name flagging ###
 If you want to use special flags like HDR or Dolby Vision or special 3D formats you have to name your files with proper tags, 
