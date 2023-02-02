@@ -1,4 +1,4 @@
-# Skin Estuary MOD V2 for KODI 20 Nexus KN Edition #
+# Skin Estuary MOD V2 for KODI 20 Nexus KN Edition Modified by C4Wiz #
 
 **Some screenshots You'll find at the end of this Readme**
 
@@ -34,9 +34,9 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
-### Mods Added to this Skin ###
+### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
-- _1.5 Modified
+- _1.0
   * Removed the PVR Plugin as a Manditory to install the skin, its now a clickable option in SkinSettings (Once the Repo is Installed)
   * Added Flag Visibility for Filename and Path Labeling ONLY:
     * 2160P and 1080P will trigger the blu-ray logo 
@@ -49,14 +49,15 @@ supports animated poster only.
   * Reformatted Duration from HH:h,MM to HH:h,MM:m (1h33 to 1h33m)
   * Reformatted chapter display from Chapter 01 : 01/16 to Chapter : 01/16
   * Added Debug Labels and Debug grid to skinsettings (useful while skinning)
-  * Added missing Mpeg-2 Varient of the Mpeg-2 Flag
-  * Extended Power menu only and ALL Power Menu Options can be toggled
+  * Added missing Mpeg2 Varient of the Mpeg-2 Flag
+  * Combined Power menus and ALL Power Menu Options can be toggled
   * Added Descriptive labels to SkinSettings Extras tab
   * Extra Addons will be Hidden till the Required Repos are Installed
   * Changed SettingsSystemIfo.xml to original Estuary layout and made more readable
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
-### 4.1.0+nexus ###
+### 4.1.0 ###
+
 - .2
   * Add option for customizing own splash background
   * Add title list to album view pt.1

@@ -734,7 +734,7 @@
 					<onclick>Skin.SelectBool(31325, 31099|powermenu_panel, 31428|powermenu_iconlist, 31427|powermenu_list)</onclick>
 					<label2>$VAR[PowerMenuAspectLabel2Var]</label2>
 				</control>
-				<control type="radiobutton" id="507">
+				<control type="radiobutton" id="502">
 					<label>$LOCALIZE[31850]</label>
 					<textureradioonfocus>settings.png</textureradioonfocus>
 					<textureradioonnofocus>settings.png</textureradioonnofocus>
@@ -782,13 +782,13 @@
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
-				<control type="radiobutton" id="510">
+				<control type="radiobutton" id="509">
 					<label>$LOCALIZE[31801]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<selected>Skin.HasSetting(DebugInfo)</selected>
 				</control>
-				<control type="radiobutton" id="511">
+				<control type="radiobutton" id="510">
 					<label>$LOCALIZE[31802]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
