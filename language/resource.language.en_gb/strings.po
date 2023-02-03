@@ -2888,6 +2888,34 @@ msgctxt "#31863"
 msgid "Reload Skin"
 msgstr ""
 
+msgctxt "#31864"
+msgid "Configure Dialog Info Buttons"
+msgstr ""
+
+msgctxt "#31865"
+msgid "Show File Manager button"
+msgstr ""
+
+msgctxt "#31866"
+msgid "Show Extended Info button"
+msgstr ""
+
+msgctxt "#31867"
+msgid "Show Set button"
+msgstr ""
+
+msgctxt "#31868"
+msgid "Show Director button"
+msgstr ""
+
+msgctxt "#31869"
+msgid "Show My Rating button"
+msgstr ""
+
+msgctxt "#31870"
+msgid "Show ArtWork Downloader button"
+msgstr ""
+
 #: Variables.xml (SkinSettingsHelpTextVar)
 msgctxt "#31901"
 msgid "Holidays Themes"

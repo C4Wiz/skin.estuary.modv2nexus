@@ -1764,7 +1764,7 @@
 				<include content="MediaFlagsRatings">
 					<param name="infolabel_prefix"/>
 				</include>
-				<-- Maybe -->
+				<!-- DVI MPAA Start -->
 				<include content="MediaFlag">
 					<param name="width" value="0" />
 					<param name="top" value="5" />
@@ -1814,6 +1814,7 @@
 						<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
 					</control>
 				</control>
+				<!-- DVI MPAA End -->
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$VAR[VideoPlayerAudioCodecFlagVar]" />
 					<param name="fallback" value="flags/audiocodec/fallback.png" />

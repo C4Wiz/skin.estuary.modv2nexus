@@ -36,7 +36,10 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
-- _1.0
+- +1.1
+  * Added SkinSettings menu to toggle DialogVideoInfo buttons
+
+- +1.0
   * Removed the PVR Plugin as a Manditory to install the skin, its now a clickable option in SkinSettings (Once the Repo is Installed)
   * Added Flag Visibility for Filename and Path Labeling ONLY:
     * 2160P and 1080P will trigger the blu-ray logo 
@@ -57,6 +60,8 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.0 ###
+- .3
+   * Fix missing HDR flag
 
 - .2
   * Add option for customizing own splash background
