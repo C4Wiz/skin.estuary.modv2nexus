@@ -2747,7 +2747,7 @@ msgstr ""
 
 #: SkinSettings.xml
 msgctxt "#31820"
-msgid "Configure InfoDialog Data"
+msgid "Configure DialogInfo Data"
 msgstr ""
 
 #: Custom_1145_DialogInfoMetadata.xml
@@ -2889,7 +2889,7 @@ msgid "Reload Skin"
 msgstr ""
 
 msgctxt "#31864"
-msgid "Configure Dialog Info Buttons"
+msgid "Configure DialogInfo Buttons"
 msgstr ""
 
 msgctxt "#31865"

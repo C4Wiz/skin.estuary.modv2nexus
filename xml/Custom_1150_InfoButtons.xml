@@ -39,25 +39,25 @@
 						<selected>!Skin.HasSetting(show_infodialogbuttonextendedinfo)</selected>
 						<onclick>Skin.ToggleSetting(show_infodialogbuttonextendedinfo)</onclick>
 					</control>
-					<control type="radiobutton" id="14112">
+					<control type="radiobutton" id="14113">
 						<label>$LOCALIZE[31867]</label>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_infodialogbuttonset)</selected>
 						<onclick>Skin.ToggleSetting(show_infodialogbuttonset)</onclick>
 					</control>
-					<control type="radiobutton" id="14112">
+					<control type="radiobutton" id="14114">
 						<label>$LOCALIZE[31868]</label>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_infodialogbuttondirector)</selected>
 						<onclick>Skin.ToggleSetting(show_infodialogbuttondirector)</onclick>
 					</control>
-					<control type="radiobutton" id="14112">
+					<control type="radiobutton" id="14115">
 						<label>$LOCALIZE[31869]</label>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_infodialogbuttonrating)</selected>
 						<onclick>Skin.ToggleSetting(show_infodialogbuttonrating)</onclick>
 					</control>
-					<control type="radiobutton" id="14112">
+					<control type="radiobutton" id="14116">
 						<label>$LOCALIZE[31870]</label>
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_infodialogbuttonartdownload)</selected>

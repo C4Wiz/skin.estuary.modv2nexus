@@ -192,7 +192,7 @@
 						<param name="label" value="$LOCALIZE[208]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonfilemanager) + String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonfilemanager) + String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">
 						<param name="id" value="8" />
 						<param name="icon" value="icons/filemanager.png" />
 						<param name="label" value="$LOCALIZE[1024]" />
@@ -212,42 +212,42 @@
 						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + !StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + !StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=movie,dbid=$INFO[ListItem.DBID])" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=movie,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + !String.IsEmpty(ListItem.TvShowDBID) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + !String.IsEmpty(ListItem.TvShowDBID) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,dbid=$INFO[ListItem.TvShowDBID])" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + String.IsEmpty(ListItem.TvShowDBID) + !String.IsEmpty(ListItem.TVShowTitle) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + String.IsEmpty(ListItem.TvShowDBID) + !String.IsEmpty(ListItem.TVShowTitle) + [String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]">
 						<param name="id" value="101" />
 						<param name="icon" value="icons/infodialogs/extendedinfo.png" />
 						<param name="label" value="$LOCALIZE[31034]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="RunScript(script.embuary.info,call=tv,query='$ESCINFO[ListItem.TVShowTitle]',year=$INFO[ListItem.Year])" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttonset) + !String.IsEmpty(ListItem.Set)">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonset) + !String.IsEmpty(ListItem.Set)">
 						<param name="id" value="444" />
 						<param name="icon" value="icons/infodialogs/set.png" />
 						<param name="label" value="$LOCALIZE[20457]" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
 						<param name="onclick_2" value="ActivateWindow(Videos,videodb://movies/sets/$INFO[ListItem.SetId]/,return)" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="Skin.HasSetting(show_infodialogbuttondirector) + !String.IsEmpty(ListItem.Director)">
+					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttondirector) + !String.IsEmpty(ListItem.Director)">
 						<param name="id" value="13" />
 						<param name="icon" value="icons/infodialogs/director.png" />
 						<param name="label" value="$LOCALIZE[31123]" />
@@ -256,7 +256,7 @@
 						<param name="id" value="7" />
 						<param name="icon" value="icons/infodialogs/rating.png" />
 						<param name="label" value="$LOCALIZE[31033]" />
-						<param name="visible" value="Skin.HasSetting(show_infodialogbuttonrating) + Control.IsEnabled(7)" />
+						<param name="visible" value="!Skin.HasSetting(show_infodialogbuttonrating) + Control.IsEnabled(7)" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.metadata.editor)">
 						<param name="id" value="442" />
@@ -268,7 +268,7 @@
 						<param name="id" value="10" />
 						<param name="icon" value="icons/infodialogs/artworkdownloader.png" />
 						<param name="label" value="$LOCALIZE[13511]" />
-						<param name="visible" value="Skin.HasSetting(show_infodialogbuttonartdownload)" />
+						<param name="visible" value="!Skin.HasSetting(show_infodialogbuttonartdownload)" />
 					</include>
 					<include content="InfoDialogSmallButton">
 						<param name="id" value="6" />

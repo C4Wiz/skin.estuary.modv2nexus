@@ -112,14 +112,24 @@
 					<selected>!Skin.HasSetting(VideoInfo_MovieCastList)</selected>
 					<onclick>Skin.ToggleSetting(VideoInfo_MovieCastList)</onclick>
 				</control>
+				<control type="radiobutton" id="121">
+					<label>$LOCALIZE[31820]</label>
+					<textureradioonfocus>settings.png</textureradioonfocus>
+					<textureradioonnofocus>settings.png</textureradioonnofocus>
+					<textureradioofffocus>settings.png</textureradioofffocus>
+					<textureradiooffnofocus>settings.png</textureradiooffnofocus>
+					<include>DefaultSettingButton</include>
+					<onclick>ActivateWindow(1145)</onclick>
+				</control>
 				<control type="radiobutton" id="120">
-					<label>Configure Info Buttons</label>
+					<label>$LOCALIZE[31864]</label>
 					<textureradioonfocus>settings.png</textureradioonfocus>
 					<textureradioonnofocus>settings.png</textureradioonnofocus>
 					<textureradioofffocus>settings.png</textureradioofffocus>
 					<textureradiooffnofocus>settings.png</textureradiooffnofocus>
 					<include>DefaultSettingButton</include>
 					<onclick>ActivateWindow(1150)</onclick>
+				</control>
 				<control type="label" id="900013">
 					<textoffsetx>45</textoffsetx>
 					<top>0</top>
@@ -1178,15 +1188,6 @@
 					<font>font28_title</font>
 					<textcolor>grey</textcolor>
 					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="radiobutton" id="721">
-					<label>$LOCALIZE[31820]</label>
-					<textureradioonfocus>settings.png</textureradioonfocus>
-					<textureradioonnofocus>settings.png</textureradioonnofocus>
-					<textureradioofffocus>settings.png</textureradioofffocus>
-					<textureradiooffnofocus>settings.png</textureradiooffnofocus>
-					<include>DefaultSettingButton</include>
-					<onclick>ActivateWindow(1145)</onclick>
 				</control>
 				<control type="radiobutton" id="708">
 					<label>$LOCALIZE[31438]</label>
