@@ -76,6 +76,13 @@
 					<selected>Skin.HasSetting(ShowSeekBar)</selected>
                     <onclick>Skin.ToggleSetting(ShowSeekBar)</onclick>
 				</control>
+				<control type="radiobutton" id="104">
+ 					<label>  ∟$LOCALIZE[31642]</label>
+ 					<include>DefaultSettingButton</include>
+ 					<selected>Skin.HasSetting(SeekbarOpacity)</selected>
+                     <onclick>Skin.ToggleSetting(SeekbarOpacity)</onclick>
+ 					<visible>Skin.HasSetting(ShowSeekbar)</visible>
+ 				</control>
 				<control type="radiobutton" id="105">
 					<label>$LOCALIZE[31430]</label>
 					<include>DefaultSettingButton</include>
@@ -434,7 +441,7 @@
 					<selected>System.HasAddon(script.embuary.helper)</selected>
 					<include>DefaultSettingButton</include>
 				</control>
-				<control type="radiobutton" id="311">
+				<control type="radiobutton" id="327">
 					<label>Skin Helper Service ColorPicker $INFO[System.AddonVersion(script.skin.helper.colorpicker),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
@@ -503,6 +510,16 @@
 					<include>DefaultSettingButton</include>
 					<visible>System.HasAddon(repository.kodinerds)</visible>
 				</control>
+				<control type="radiobutton" id="311">
+ 					<label>Audio DSP $INFO[System.AddonVersion(script.input.adsp),(,)]</label>
+ 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+ 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+ 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+ 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+ 					<onclick condition="!System.HasAddon(script.input.adsp)">InstallAddon(script.input.adsp)</onclick>
+ 					<selected>System.HasAddon(script.input.adsp)</selected>
+ 					<include>DefaultSettingButton</include>
+ 				</control>
 				<control type="radiobutton" id="310">
 					<label>Sleepy Watchdog $INFO[System.AddonVersion(service.sleepy.watchdog),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>

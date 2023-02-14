@@ -29,7 +29,7 @@
 		<value condition="System.Platform.Linux">Linux</value>
 		<value>unknown</value>
 	</variable>
-	<variable name="ThemesVar">
+	<variable name="ThemesBGVar">
 		<value condition="$EXP[ChristmasTheme]">special://skin/extras/themes/christmas/background.jpg</value>
  		<value condition="$EXP[HalloweenTheme]">special://skin/extras/themes/halloween/background.jpg</value>
  		<value condition="$EXP[PreEasterTheme]">special://skin/extras/themes/palmweek/background.jpg</value>
@@ -38,6 +38,13 @@
  		<value condition="!String.IsEmpty(Skin.String(splash_background))">$INFO[Skin.String(splash_background)]</value>
  		<value>special://skin/extras/themes/background.jpg</value>
 	</variable>
+	<variable name="ThemesVar">
+ 		<value condition="$EXP[ChristmasTheme]">themes/christmas/</value>
+ 		<value condition="$EXP[HalloweenTheme]">themes/halloween/</value>
+ 		<value condition="$EXP[PreEasterTheme]">themes/palmweek/</value>
+ 		<value condition="$EXP[EasterTheme]">themes/easter/</value>
+ 		<value condition="$EXP[ValentineTheme]">themes/valentine/</value>
+ 	</variable>
 	<variable name="SettingsForcedViewsMoviesVar">
 			<value condition="Skin.HasSetting(movies.50)">$LOCALIZE[535]</value>
 			<value condition="Skin.HasSetting(movies.55)">$LOCALIZE[31107]</value>
@@ -692,9 +699,6 @@
 		<value condition="VideoPlayer.Content(movies)">special://skin/extras/home-images/movies.jpg</value>
 		<value condition="VideoPlayer.Content(episodes)">special://skin/extras/home-images/tvshows.jpg</value>
 	</variable>
-	<variable name="PlayerInfoFanartVar">
-		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
-	</variable>
 	<variable name="PlayerFanartOpacityVar">
 		<value condition="Skin.HasSetting(hide_fanartopacity) + !Player.ShowInfo + !Window.IsVisible(musicosd)"/>
 		<value>88FFFFFF</value>
@@ -839,7 +843,7 @@
 		<value/>
 	</variable>
 	<variable name="MPAAImageVar">
-		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
+		<value condition="String.Contains(ListItem.mpaa,TV-Y7) | String.Contains(ListItem.mpaa,TV-Y) | String.Contains(ListItem.mpaa,TV-PG) | String.Contains(ListItem.mpaa,TV-G) | String.Contains(ListItem.mpaa,TV-14) | String.Contains(ListItem.mpaa,TV-MA)">flags/mpaa-tv.png</value>
 		<value condition="String.Contains(ListItem.mpaa,PG-13) | String.Contains(Container(60).ListItem.mpaa,PG-13) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),PG-13) | String.Contains(ListItem.mpaa,NC-17) | String.Contains(Container(60).ListItem.mpaa,NC-17) | String.Contains(Window(Home).Property(PVR.Artwork.ListItem.mpaa),NC-17)">flags/mpaa-long.png</value>
 		<value>flags/mpaa.png</value>
 	</variable>
@@ -1122,6 +1126,10 @@
 		<value condition="String.IsEqual(Skin.String(autoclose_osd),31584)">$LOCALIZE[31584]</value>
 		<value>$LOCALIZE[31334]</value>
 	</variable>
+	<variable name="SeekBarOpacityVar">
+ 		<value condition="Skin.HasSetting(SeekbarOpacity)">3FFFFFFF</value>
+ 		<value>FFFFFFFF</value>
+ 	</variable>
 	<variable name="WidgetActionVar">
 		<value condition="String.IsEqual(Skin.String(widget_action),31589)">$LOCALIZE[31589]</value>
 		<value condition="String.IsEqual(Skin.String(widget_action),31590)">$LOCALIZE[31590]</value>
@@ -1670,6 +1678,7 @@
 		<value condition="Control.HasFocus(704)">$LOCALIZE[24012]</value>
 		<value condition="Control.HasFocus(7041)">$LOCALIZE[24012]</value>
 		<value condition="Control.HasFocus(705)">$LOCALIZE[21447]</value>
+		<value condition="Control.HasFocus(706)">$LOCALIZE[660]</value>
 		<value condition="Control.HasFocus(804)">$LOCALIZE[31092]</value>
 		<value condition="Control.HasFocus(70040)">$LOCALIZE[19019]</value>
 		<value condition="Control.HasFocus(70041)">$LOCALIZE[19686]</value>
