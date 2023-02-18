@@ -62,7 +62,8 @@ supports animated poster only.
 ### 4.1.1 ###
 
 - .1
-   * remove wrongly showed fanart/landscape on seek bar when simplyfied OSD is selected
+   * improving + removing fanart/landscape from seek bar
+   * fix display of long titles/filenames on list view (issue #114)
 
 - .0
    * coloured flags updated (Thanks to Frodo19)
