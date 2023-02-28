@@ -60,9 +60,13 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .3
+   * fix wrong behaviour of seekbar in music OSD
+
 - .2
    * remove doubled episode title on PVR timer widget
    * remove overlapping between title and plot in list view
+   * smaller fixes
 
 - .1
    * improving + removing fanart/landscape from seek bar
