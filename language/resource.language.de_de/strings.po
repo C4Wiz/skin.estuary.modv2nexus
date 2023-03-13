@@ -2543,3 +2543,8 @@ msgstr "Bevorzuge Album Fanart vor Künstler Fanart"
 msgctxt "#31642"
 msgid "High Transparency of Seekbar Background"
 msgstr "hohe Hintergrundtransparenz der Suchleiste"
+
+#: /xml/MyVideoNav
+msgctxt "#31643"
+msgid "Use Poster View"
+msgstr "Zeige Posteransicht"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
+	<onload>SetProperty(CurrentSkin,skin.estuary.modv2nexus,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
@@ -19,7 +19,7 @@
 		</control>
 		<include>DefaultBackground</include>
 		<include>GlobalAnimatedBackground</include>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -28,12 +28,12 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
+			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</texture>
 			<timeperimage>3000</timeperimage>
 			<randomize>true</randomize>
-			<visible>Skin.HasSetting(show_fanart) + [Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)] + ![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
+			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
 		</control>
-		<control type="multiimage">
+		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
@@ -42,22 +42,7 @@
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
-			<timeperimage>3000</timeperimage>
-			<randomize>true</randomize>
-			<visible>[[Control.HasFocus(9000) + !String.IsEmpty(Container(9000).ListItem.Property(background))] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + !String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(804) + String.IsEmpty(Skin.String(power_background)) + !Skin.HasSetting(enable_power_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + !String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(802) + String.IsEmpty(Skin.String(settings_background)) + !Skin.HasSetting(enable_settings_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + !String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]] | [[Control.HasFocus(801) + String.IsEmpty(Skin.String(search_background)) + !Skin.HasSetting(enable_search_background)] + [Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))]]</visible>
-			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)]</visible>
-		</control>
-		<control type="multiimage">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<fadetime>400</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[WeatherFanartVar]</imagepath>
+			<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[WeatherFanartVar]</texture>
 			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
@@ -1149,7 +1134,7 @@
 								<left>20</left>
 								<right>20</right>
 								<shadowcolor>text_shadow</shadowcolor>
-								<label>$LOCALIZE[166] Estuary MOD V2 • $INFO[System.AddonVersion(skin.estuary.modv2),$LOCALIZE[24051] ]</label>
+								<label>$LOCALIZE[166] Estuary MOD V2 • $INFO[System.AddonVersion(skin.estuary.modv2nexus),$LOCALIZE[24051] ]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>

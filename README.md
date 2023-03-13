@@ -36,6 +36,9 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
+- +1.2
+* Reverted Simple Seekbar for cleaner look
+
 - +1.1
   * Added SkinSettings menu to toggle DialogVideoInfo buttons
 
@@ -60,6 +63,16 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .4
+  * improved music OSD
+  * changed cond visibility of metadata editor (video/music info)  
+  * improved Flix View for movie sets (bigger background for sets with < 5 items)
+  * add option to switch between poster/fanart in Mosaic views (video plugins)
+  * conditions for displaying background images optimized/simplified 
+  * fix slightly wrong aspect ratio for posters in views/info/OSD
+  * fix now unsupported background opacity (Nexus 20.1) by replacing multiimage controls with image controls
+   
+
 - .3
    * fix wrong behaviour of seekbar in music OSD
 
