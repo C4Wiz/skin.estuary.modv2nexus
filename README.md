@@ -63,6 +63,12 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .5
+   * fix missing thumb/icon on extended list view for some plugins
+   * disable/enable addon 'CU LrcLyrics' (song text) via script
+   * improved Music OSD settings
+   * fix missing actor pictures on actors category for musicvideos
+
 - .4
   * improved music OSD
   * changed cond visibility of metadata editor (video/music info)  
@@ -71,7 +77,6 @@ supports animated poster only.
   * conditions for displaying background images optimized/simplified 
   * fix slightly wrong aspect ratio for posters in views/info/OSD
   * fix now unsupported background opacity (Nexus 20.1) by replacing multiimage controls with image controls
-   
 
 - .3
    * fix wrong behaviour of seekbar in music OSD
