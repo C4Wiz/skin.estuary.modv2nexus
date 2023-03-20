@@ -68,6 +68,8 @@ supports animated poster only.
    * disable/enable addon 'CU LrcLyrics' (song text) via script
    * improved Music OSD settings
    * fix missing actor pictures on actors category for musicvideos
+   * fix missing artists pictures on actors category for musicvideos
+   * add artist pictures to video info dialog
 
 - .4
   * improved music OSD
