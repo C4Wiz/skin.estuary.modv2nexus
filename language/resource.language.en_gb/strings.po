@@ -2697,6 +2697,10 @@ msgctxt "#31643"
 msgid "Use Poster View"
 msgstr ""
 
+msgctxt "#31644"
+msgid "Arial Unicode based"
+msgstr ""
+
 #: - Modified Start -
 
 #: DialogVideoInfo.xml

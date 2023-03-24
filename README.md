@@ -63,6 +63,13 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .6
+   * fix overlapping genre/plotline in Flix View
+   * extend option play/info for home widgets to music video widgets
+   * add dependencies for estuary helper/info to widget selection menu entries (tvshows)
+   * smaller improvements and updates on several files
+   * introducing 'Arial Unicode MS' as a new font style supporting more languages (mainly asian region)
+
 - .5
    * fix missing thumb/icon on extended list view for some plugins
    * disable/enable addon 'CU LrcLyrics' (song text) via script
