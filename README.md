@@ -63,6 +63,16 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .8
+   * quick fix of helper script (cause kodi to crash when file path is a plugin call)
+
+- .7
+   * calculate/display size of a file object by helper script
+   * remove horizontal EPG grid layout
+   * add EPG navigation entry to side blade (PVR EPG only)
+   * add progress indicator to recording widget (PVR) 
+   * smaller modifications on several views
+
 - .6
    * fix overlapping genre/plotline in Flix View
    * extend option play/info for home widgets to music video widgets

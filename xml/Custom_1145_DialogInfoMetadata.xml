@@ -147,6 +147,12 @@
 						<selected>!Skin.HasSetting(show_infodialogfilenameandpath)</selected>
 						<onclick>Skin.ToggleSetting(show_infodialogfilenameandpath)</onclick>
 					</control>
+					<control type="radiobutton" id="12131">
+						<label>$LOCALIZE[31841]</label>
+						<include>DefaultSettingButton</include>
+						<selected>!Skin.HasSetting(show_infodialogfilesize)</selected>
+						<onclick>Skin.ToggleSetting(show_infodialogfilesize)</onclick>
+					</control>
 				</control>
 				<include content="SettingsScrollbar">
 					<param name="height">485</param>
