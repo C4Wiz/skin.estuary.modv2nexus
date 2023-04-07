@@ -71,6 +71,8 @@
  	<expression name="widgetHasFocus">Control.HasFocus(4900) | Control.HasFocus(49001) | Control.HasFocus(5900) | Control.HasFocus(59001) | Control.HasFocus(6900) | Control.HasFocus(69001) | Control.HasFocus(7900) | Control.HasFocus(79001) | Control.HasFocus(8900) | Control.HasFocus(89001) | Control.HasFocus(11900) | Control.HasFocus(119001) | Control.HasFocus(12900) | Control.HasFocus(129001) | Control.HasFocus(13900) | Control.HasFocus(139001) | Control.HasFocus(16900) | Control.HasFocus(169001)</expression>
  	<!-- Expression showing Jump to Letter -->
  	<expression name="isJump2Letter">System.AddonIsEnabled(script.embuary.helper) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20376])] + [String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,set) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,musicvideo) | Container.Content(addons)]</expression>
+ 	<!-- Expression showing Status icon on EPG timelime -->
+ 	<expression name="hasPvrStatus">ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimerSchedule | ListItem.HasTimer | ListItem.HasArchive | ListItem.IsPlaying | ListItem.IsLive | ListItem.IsPremiere | ListItem.IsNew | ListItem.IsFinale</expression>
  	
 	<include name="CommonScrollbars">
 		<control type="group">
@@ -4148,10 +4150,10 @@
 					<control type="image">
 						<description>Cover Live TV, RDS Radio, Stream (Addon)</description>
 						<depth>DepthOSD+</depth>
-						<left>10</left>
-						<bottom>5</bottom>
-						<width>440</width>
-						<height>440</height>
+						<left>8</left>
+ 						<bottom>3</bottom>
+ 						<width>444</width>
+ 						<height>444</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<texture colordiffuse="$VAR[BorderColorVar]">colors/white.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -4165,20 +4167,8 @@
 						<width>440</width>
 						<height>440</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture background="true">$VAR[RadioPlayerCover]</texture>
+						<texture background="true" fallback="DefaultAudio.png">$VAR[RadioPlayerCover]</texture>
 						<bordersize>20</bordersize>
-						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-					</control>
-					<control type="image">
-						<depth>DepthOSD+</depth>
-						<left>14</left>
-						<bottom>9</bottom>
-						<width>432</width>
-						<height>432</height>
-						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
-						<bordersize>20</bordersize>
-						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))</visible>
 						<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
 					</control>
 					<include content="BusyPvrArtworkSpinner">

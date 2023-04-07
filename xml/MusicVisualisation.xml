@@ -11,15 +11,15 @@
 			<visible>Skin.HasSetting(enable_visualisation) + Skin.HasSetting(show_visualisationbehind)</visible>
 		</control>
 		<control type="image">
- 			<left>0</left>
- 			<top>0</top>
- 			<width>100%</width>
- 			<height>100%</height>
- 			<aspectratio>keep</aspectratio>
- 			<fadetime>400</fadetime>
- 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
- 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-             <texture colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</texture>
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>400</fadetime>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+            <texture colordiffuse="$VAR[PlayerFanartOpacityVar]">$VAR[PlayerFanartVar]</texture>
 			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animate_artistslideshow)">Conditional</animation>
 			<visible>!Skin.HasSetting(hide_background_fanart)</visible>
@@ -89,5 +89,11 @@
                 <visible>Pvr.IsPlayingRadio</visible>
             </control>
         </control>
+		<control type="image">
+            <include>FullScreenDimensions</include>
+			<animation effect="fade" time="300">VisibleChange</animation>
+            <texture>colors/black.png</texture>
+			<visible>Skin.HasSetting(dim_screen)</visible>
+		</control>
 	</controls>
 </window>

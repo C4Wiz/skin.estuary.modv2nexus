@@ -63,6 +63,13 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .9
+   * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
+   * fix addon activation of lrclyrics in Music OSD settings
+   * add a "Black Screen" button to music OSD: show a black screen while playing music
+   * fix live TV video OSD flickering on channel/window changes
+   * smaller improvements in PVR section
+
 - .8
    * quick fix of helper script (cause kodi to crash when file path is a plugin call)
 
