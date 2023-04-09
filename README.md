@@ -63,6 +63,10 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .10
+   * fix "switch to last channel" in video OSD
+   * some icons added
+
 - .9
    * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
    * fix addon activation of lrclyrics in Music OSD settings
