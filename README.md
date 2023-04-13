@@ -66,6 +66,8 @@ supports animated poster only.
 - .10
    * fix "switch to last channel" in video OSD
    * some icons added
+   * enable flix view for tvshow seasons
+   * music OSD settings menu optimized
 
 - .9
    * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
