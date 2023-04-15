@@ -37,7 +37,8 @@ supports animated poster only.
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
 - +1.2
-* Reverted Simple Seekbar for cleaner look
+  * Reverted Simple Seekbar for cleaner look
+  * Add Visibility for Reboot from eMMC/NAND System.PathExist("/dev/super")
 
 - +1.1
   * Added SkinSettings menu to toggle DialogVideoInfo buttons

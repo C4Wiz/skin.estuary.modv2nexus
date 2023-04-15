@@ -82,7 +82,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_pmrebootfromemmc)</selected>
 						<onclick>Skin.ToggleSetting(show_pmrebootfromemmc)</onclick>
-						<visible>System.PathExist("/dev/system")| System.PathExist("/dev/userdata")</visible>
+						<visible>System.PathExist("/dev/system") | System.PathExist("/dev/userdata") | System.PathExist("/dev/super")</visible>
 					</control>
 					<control type="radiobutton" id="13119">
 						<label>$LOCALIZE[31857]</label>
