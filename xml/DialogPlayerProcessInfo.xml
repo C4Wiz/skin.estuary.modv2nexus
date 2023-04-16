@@ -137,7 +137,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.VideoCodec,[COLOR button_focus]$LOCALIZE[31600]:[/COLOR] ]</label>
+					<label>$INFO[VideoPlayer.VideoCodec,[COLOR button_focus]$LOCALIZE[31780]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -146,7 +146,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.VideoResolution,[COLOR button_focus]$LOCALIZE[31601]:[/COLOR] ]</label>
+					<label>$INFO[VideoPlayer.VideoResolution,[COLOR button_focus]$LOCALIZE[31781]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -155,7 +155,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.VideoAspect,[COLOR button_focus]$LOCALIZE[31602]:[/COLOR] ]</label>
+					<label>$INFO[Window(Home).Property(nowplaying_videoaspect),[COLOR button_focus]$LOCALIZE[31782]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -164,7 +164,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.VideoBitrate,[COLOR button_focus]$LOCALIZE[31603]:[/COLOR] , kb/s]</label>
+					<label>$INFO[VideoPlayer.VideoBitrate,[COLOR button_focus]$LOCALIZE[31783]:[/COLOR] , kb/s]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -178,7 +178,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.AudioCodec,[COLOR button_focus]$LOCALIZE[31604]:[/COLOR] ]</label>
+					<label>$INFO[VideoPlayer.AudioCodec,[COLOR button_focus]$LOCALIZE[31784]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -187,7 +187,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.AudioChannels,[COLOR button_focus]$LOCALIZE[31605]:[/COLOR] ]</label>
+					<label>$INFO[VideoPlayer.AudioChannels,[COLOR button_focus]$LOCALIZE[31785]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -196,7 +196,7 @@
 					<width>830</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[VideoPlayer.AudioBitrate,[COLOR button_focus]$LOCALIZE[31606]:[/COLOR] , kb/s]</label>
+					<label>$INFO[VideoPlayer.AudioBitrate,[COLOR button_focus]$LOCALIZE[31786]:[/COLOR] , kb/s]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -259,7 +259,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.ScreenResolution,[COLOR button_focus]$LOCALIZE[31607]:[/COLOR] ]</label>
+					<label>$INFO[System.ScreenResolution,[COLOR button_focus]$LOCALIZE[31787]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -267,7 +267,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.FPS,[COLOR button_focus]$LOCALIZE[31608]:[/COLOR] , fps]</label>
+					<label>$INFO[System.FPS,[COLOR button_focus]$LOCALIZE[31788]:[/COLOR] , fps]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -284,7 +284,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.CpuUsage,[COLOR button_focus]$LOCALIZE[31609]:[/COLOR] ]</label>
+					<label>$INFO[System.CpuUsage,[COLOR button_focus]$LOCALIZE[31789]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -305,7 +305,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(amlogic.displaymode),[COLOR button_focus]$LOCALIZE[32100]:[/COLOR] ]</label>
+					<label>$INFO[Player.Process(amlogic.displaymode),[COLOR button_focus]$LOCALIZE[31792]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -314,7 +314,7 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(amlogic.eoft_gamut),[COLOR button_focus]$LOCALIZE[32101]:[/COLOR] ]</label>
+					<label>$INFO[Player.Process(amlogic.eoft_gamut),[COLOR button_focus]$LOCALIZE[31611]:[/COLOR] ]</label>
 					<font>font14</font>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>
@@ -350,14 +350,14 @@
 					<width>auto</width>
 					<height>100</height>
 					<textoffsetx>40</textoffsetx>
-					<label>$LOCALIZE[31138]</label>
+					<label>$LOCALIZE[31792]</label>
 					<onfocus>SetProperty(PlayerInfoDialogFocus,5553,Home)</onfocus>
 				</control>
 				<control type="button" id="5554">
 					<width>auto</width>
 					<height>100</height>
 					<textoffsetx>40</textoffsetx>
-					<label>$LOCALIZE[31611]</label>
+					<label>$LOCALIZE[31791]</label>
 					<onfocus>SetProperty(PlayerInfoDialogFocus,5554,Home)</onfocus>
 				</control>
 			</control>
