@@ -64,11 +64,17 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .11
+   * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
+   * add Embuary Helper to skin dependencies
+
 - .10
    * fix "switch to last channel" in video OSD
    * some icons added
    * enable flix view for tvshow seasons
    * music OSD settings menu optimized
+   * introduce Radio RDS info screen
+   * set opacity of music fanart similar to background opacity
 
 - .9
    * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
