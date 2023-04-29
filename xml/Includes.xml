@@ -4461,7 +4461,7 @@
 						<visible>Window.IsVisible(MusicVisualisation.xml) + !String.IsEmpty(MusicPlayer.Offset(1).Title) + !Pvr.IsPlayingRadio</visible>
 					</control>
 					<control type="label">
-						<left>460</left>
+						<left>1185</left>
 						<bottom>210</bottom>
 						<right>30</right>
 						<height>30</height>
@@ -4469,12 +4469,12 @@
 						<label>$INFO[player.chapter,$LOCALIZE[21396] : ]$INFO[player.chaptercount, / ,]</label>
 						<font>font12</font>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>player.chaptercount</visible>
+						visible>!String.IsEqual(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1138) + !Window.IsVisible(1139)</visible>
 						<visible>![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]</visible>
 					</control>
 					<control type="label">
-						<left>460</left>
+						<left>1185</left>
 						<bottom>210</bottom>
 						<right>30</right>
 						<height>30</height>
@@ -4483,7 +4483,7 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>player.chaptercount</visible>
+						<visible>!String.IsEqual(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>
 						<visible>[Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)] | Window.IsVisible(1138)</visible>
 					</control>
@@ -4572,18 +4572,10 @@
 					<param name="visible2" value="!Skin.HasSetting(show_mediavideocodecflag)" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="texture" value="$VAR[HdrTypeVar]" />
+					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
 					<param name="width" value="94" />
-					<param name="top" value="5" />
-				</include>
-				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.HdrType,flags/videoresolution/,.png]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
-					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
-					<param name="width" value="94" />
-					<param name="top" value="5" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />

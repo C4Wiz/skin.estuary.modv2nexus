@@ -39,6 +39,7 @@ supports animated poster only.
 - +1.2
   * Reverted Simple Seekbar for cleaner look
   * Add Visibility for Reboot from eMMC/NAND System.PathExist("/dev/super")
+  * Fix MediaFlagOSD display for HDR10+
 
 - +1.1
   * Added SkinSettings menu to toggle DialogVideoInfo buttons
@@ -67,6 +68,9 @@ supports animated poster only.
 - .11
    * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
    * add Embuary Helper to skin dependencies
+   * avoid showing PVR Nextup if EPG isn't available
+   * fix overlapping labels in video OSD
+   * more compact main menu
 
 - .10
    * fix "switch to last channel" in video OSD
