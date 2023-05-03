@@ -138,6 +138,7 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[31556]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot_android.png</icon>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot()</onclick>
 						<visible>System.CanReboot</visible>
@@ -365,6 +366,7 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[31556]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot_android.png</icon>
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot()</onclick>
 						<visible>System.CanReboot</visible>
@@ -511,6 +513,7 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[31556]</label>
+						<icon>special://skin/extras/icons/Power menu/reboot_android.png</icon> 
 						<onclick>System.ExecWait("/usr/sbin/rebootfromnand")</onclick>
 						<onclick>Reboot()</onclick>
 						<visible>System.CanReboot</visible>
