@@ -36,6 +36,10 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
+- +1.3
+  * Fixed Missing Reboot from emmc/nand Icon
+  * Added custon Reboot to Android Icon
+
 - +1.2
   * Reverted Simple Seekbar for cleaner look
   * Add Visibility for Reboot from eMMC/NAND System.PathExist("/dev/super")
