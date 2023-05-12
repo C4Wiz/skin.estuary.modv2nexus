@@ -39,6 +39,7 @@ supports animated poster only.
 - +1.3
   * Fixed Missing Reboot from emmc/nand Icon
   * Added custon Reboot to Android Icon
+  * Removed Year from Title in Info and PlayerInfo
 
 - +1.2
   * Reverted Simple Seekbar for cleaner look
