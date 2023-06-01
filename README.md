@@ -70,6 +70,17 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
+- .14
+  * extended info views (Embuary) modified
+
+- .13
+  * fix missing font definitions
+  * fix mistakenly displayed chaptercount in music player
+  * smaller fixes
+
+- .12
+  * add support for Android Super Partition (issue #122)
+  * add title info to Mosaic view
 - .11
    * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
    * add Embuary Helper to skin dependencies
