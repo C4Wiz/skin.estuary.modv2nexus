@@ -694,7 +694,7 @@
 				</include>
 				<include content="InfoDialogMetadata">
 					<param name="control_id" value="173" />
-					<param name="label" value="$LOCALIZE[31487] : [COLOR white]$INFO[ListItem.DateAdded][/COLOR]" />
+					<param name="label" value="$LOCALIZE[570] : [COLOR white]$INFO[ListItem.DateAdded][/COLOR]" />
 					<param name="visible" value="!Skin.HasSetting(show_infodialogdateadded) + !String.IsEmpty(ListItem.DateAdded)" />
 					<param name="textcolor" value="$VAR[SkinColorVar]" />
 					<param name="font" value="font12" />

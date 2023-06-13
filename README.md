@@ -71,7 +71,9 @@ supports animated poster only.
 --------------------------------------------------------------------------------------------
 ### 4.1.1 ###
 - .14
-  * extended info views (Embuary) modified
+   * improving extended info views (Embuary)
+   * smaller fixes and improvements
+   * add season/episode label to flix view (tv show episode view)
 
 - .13
   * fix missing font definitions

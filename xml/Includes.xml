@@ -4338,7 +4338,7 @@
 						<bottom>270</bottom>
 						<right>30</right>
 						<height>30</height>
-						<label>[B]$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)][/B]</label>
+						<label>[B]$INFO[VideoPlayer.Artist,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Album,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.TVShowTitle,, [COLOR white]-[/COLOR] ]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[VideoPlayer.Title][/B]</label>
 						<scroll>true</scroll>
 						<font>font37</font>
 						<scroll>true</scroll>
@@ -4481,7 +4481,7 @@
 						<label>$INFO[player.chapter,$LOCALIZE[21396] : ]$INFO[player.chaptercount, / ,]</label>
 						<font>font12</font>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>IntegerIsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
+						<visible>!String.IsEqual(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1138) + !Window.IsVisible(1139)</visible>
 						<visible>![Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)]</visible>
 					</control>
@@ -4495,7 +4495,7 @@
 						<font>font12</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<visible>IntegerIsGreater(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
+						<visible>!String.IsEqual(Player.ChapterCount,0) + !VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
 						<visible>!Window.IsVisible(playerprocessinfo) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(1122) + !Window.IsVisible(1139)</visible>
 						<visible>[Window.IsActive(fullscreeninfo) + !String.IsEmpty(VideoPlayer.Plot)] | Window.IsVisible(1138)</visible>
 					</control>
@@ -4829,12 +4829,12 @@
 						<texture>flags/cadre_small.png</texture>
 					</control>
 					<control type="image">
-						<left>6</left>
- 						<top>5</top>
- 						<width>50</width>
- 						<height>30</height>
+						<left>12</left>
+ 						<top>2</top>
+ 						<width>36</width>
+ 						<height>36</height>
  						<aspectratio>scale</aspectratio>
-						<texture colordiffuse="$VAR[SkinColorVar]">flags/nas_2.png</texture>
+						<texture colordiffuse="$VAR[SkinColorVar]">icons/extendedinfo/OverlayLocal.png</texture>
 					</control>
 				</control>
 				<control type="group">
