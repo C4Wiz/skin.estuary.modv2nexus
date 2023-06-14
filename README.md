@@ -36,6 +36,9 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
+- +1.4
+  * Adjust auto stop timer to 5min, 10imn, 15min, 20min, 30min
+
 - +1.3
   * Fixed Missing Reboot from emmc/nand Icon
   * Added custon Reboot to Android Icon
@@ -69,6 +72,10 @@ supports animated poster only.
   * Changed SettingsSystemIfo.xml to original Estuary layout and made more readable
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
+### 4.1.2 ###
+ - .0
+   * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
+
 ### 4.1.1 ###
 - .14
    * improving extended info views (Embuary)

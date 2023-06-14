@@ -2714,6 +2714,32 @@ msgctxt "#31647"
 msgid "Black Screen : on"
 msgstr ""
 
+#: /xml/Skinsettings.xml
+
+msgctxt "#31648"
+msgid "Stop Player if Video/Audio is paused longer than"
+msgstr ""
+
+msgctxt "#31649"
+msgid "5 Minutes"
+msgstr ""
+
+msgctxt "#31650"
+msgid "10 Minutes"
+msgstr ""
+
+msgctxt "#31651"
+msgid "15 Minutes"
+msgstr ""
+
+msgctxt "#31652"
+msgid "20 Minutes"
+msgstr ""
+
+msgctxt "#31653"
+msgid "30 Minutes"
+msgstr ""
+
 #: - Modified Start -
 
 #: /xml/DialogPlayerProcessInfo.xml
