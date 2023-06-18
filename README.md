@@ -73,8 +73,10 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
- - .0
+- .0
    * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
+   * fix condition (issue #123)
+   * add season label to flix view items (tv show season view)
 
 ### 4.1.1 ###
 - .14
