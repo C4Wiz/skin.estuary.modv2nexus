@@ -38,6 +38,7 @@ supports animated poster only.
 -------------------------------------------------------------------------------------------
 - +1.4
   * Adjust auto stop timer to 5min, 10imn, 15min, 20min, 30min
+  * Moved Chapter display down out od title overlap
 
 - +1.3
   * Fixed Missing Reboot from emmc/nand Icon
@@ -74,9 +75,11 @@ supports animated poster only.
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
 - .0
-   * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
+  * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
    * fix condition (issue #123)
    * add season label to flix view items (tv show season view)
+   * convert all home images to baseline JPEG format specification
+   * fix pause bug on PVR related OSD Info, remove pause on info for LiveTV/Recordings
 
 ### 4.1.1 ###
 - .14
