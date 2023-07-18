@@ -4587,7 +4587,7 @@
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$VAR[HdrTypeVar]" />
-					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + String.Contains(VideoPlayer.HdrType,dolbyvision) + !Window.IsVisible(MusicVisualisation.xml)" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
 					<param name="width" value="94" />
 				</include>
