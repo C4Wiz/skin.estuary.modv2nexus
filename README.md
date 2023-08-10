@@ -38,7 +38,7 @@ supports animated poster only.
 -------------------------------------------------------------------------------------------
 - +1.4
   * Adjust auto stop timer to 5min, 10imn, 15min, 20min, 30min
-  * Moved Chapter display down out od title overlap
+  * Moved Chapter display down out of title overlap
 
 - +1.3
   * Fixed Missing Reboot from emmc/nand Icon
@@ -74,6 +74,23 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
+- .5
+   * add support for PreShow Experience
+   * add TV Show count/seen/unseen to settings shortcut widget
+   * improved actors list in video info
+
+- .4
+   * Update Player Process Info (again thanks to frodo19)
+   * Move Chapter/Cutmarkers to seekbar
+   * improved battery level graphics
+   * Fix missing video genre fanart even if fanart pack is installed
+   * add runtime (duration) to PVR search results, minor improvements
+   * add a resume button to video info (DialogVideoInfo.xml)
+
+- .3
+   * reverted image type back to multiimage for weather widget pt.2
+   * Introducing battery level display/symbol on Top Bar in Home screen for mobile devices
+
 - .2
    * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
    * adjustments on mosaic views

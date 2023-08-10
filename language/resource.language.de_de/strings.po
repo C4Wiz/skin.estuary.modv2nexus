@@ -2565,3 +2565,31 @@ msgstr "Schwarzbild : aus"
 msgctxt "#31647"
 msgid "Black Screen : on"
 msgstr "Schwarzbild : an"
+
+msgctxt "#31648"
+msgid "Stop Player if Video/Audio is paused longer than"
+msgstr "Player stoppen, wenn Video/Audio länger pausiert als"
+
+msgctxt "#31649"
+msgid "5 Minutes"
+msgstr "5 Minuten"
+
+msgctxt "#31650"
+msgid "10 Minutes"
+msgstr "10 Minuten"
+
+msgctxt "#31651"
+msgid "15 Minutes"
+msgstr "15 Minuten"
+
+msgctxt "#31652"
+msgid "20 Minutes"
+msgstr "20 Minuten"
+
+msgctxt "#31653"
+msgid "30 Minutes"
+msgstr "30 Minuten"
+
+msgctxt "#31655"
+msgid "Show Battery Level"
+msgstr "Ladestand der Batterie anzeigen"

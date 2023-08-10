@@ -2970,6 +2970,10 @@
 						<texture>$INFO[Weather.FanartCode,special://skin/extras/weather/,.png]</texture>
 						<visible>Skin.HasSetting(show_weatherinfo) + Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)]</visible>
 					</control>
+					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
+ 						<param name="width">120</param>
+ 						<param name="top">12</param>
+ 					</include>
 					<control type="image">
 						<top>8</top>
 						<left>-20</left>
@@ -3002,6 +3006,53 @@
 			<include>TouchBackButton</include>
 		</definition>
 	</include>
+	<include name="BatteryIndicator">
+ 		<param name="top">12</param>
+ 		<param name="left">10</param>
+ 		<param name="width">120</param>
+ 		<definition>
+ 			<control type="group">
+ 				<top>$PARAM[top]</top>
+ 				<width>$PARAM[width]</width>
+ 				<left>$PARAM[left]</left>
+ 				<height>28</height>
+ 				<visible>Skin.HasSetting(show_battery)</visible>
+ 				<control type="image">
+ 					<width>100</width>
+ 					<height>28</height>
+ 					<texture>flags/battery_load.png</texture>
+ 				</control>
+ 				<control type="progress">
+ 					<top>8</top>
+ 					<left>10</left>
+ 					<width>27</width>
+ 					<height>12</height>
+ 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
+ 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
+ 					<info>System.BatteryLevel</info>
+ 					<visible>Integer.IsGreater(System.BatteryLevel,9)</visible>
+ 				</control>
+ 				<control type="progress">
+ 					<top>8</top>
+ 					<left>10</left>
+ 					<width>27</width>
+ 					<height>12</height>
+ 					<texturebg border="3" colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texturebg>
+ 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+ 					<info>System.BatteryLevel</info>
+ 					<visible>Integer.IsLessOrEqual(System.BatteryLevel,9)</visible>
+ 				</control>
+ 				<control type="label">
+ 					<top>-1</top>
+ 					<left>45</left>
+ 					<width>50</width>
+ 					<font>font09</font>
+ 					<align>center</align>
+ 					<label>$INFO[System.BatteryLevel]</label>
+ 				</control>
+ 			</control>
+ 		</definition>
+ 	</include>
 	<include name="BreadcrumbsLabel">
 		<param name="font">font12_bold</param>
 		<param name="textcolor">white</param>
@@ -3097,11 +3148,8 @@
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
-						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$INFO[Skin.String(global-background)]</texture>
-						<timeperimage>3000</timeperimage>
-						<randomize>true</randomize>
-						<visible>!Window.IsVisible(Home.xml) + !Skin.HasSetting(show_fanart) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
-						<visible>!Skin.HasSetting(show_fanart) + !String.IsEmpty(Skin.String(global-background))</visible>
+						<texture background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[MediaFanartVar]</texture>
+ 						<visible>Skin.HasSetting(show_fanart) + !Window.IsVisible(Home.xml) + !Control.IsVisible(502) + !Control.IsVisible(510) + !$EXP[infodialog_active]</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>
@@ -3725,23 +3773,6 @@
 				<onleft>StepBack</onleft>
 				<onclick condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onclick>
 			</control>
-			<control type="ranges">
-				<height>10</height>
-				<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
-				<lefttexture>colors/white.png</lefttexture>
-				<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
-				<righttexture>colors/white.png</righttexture>
-				<info>Player.Cutlist</info>
-			</control>
-			<control type="ranges">
-				<top>4</top>
-				<height>6</height>
-				<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
-				<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
-				<righttexture>colors/white.png</righttexture>
-				<info>Player.Chapters</info>
-			</control>
 			<control type="group">
 				<visible>![Player.Seeking | HasPerformedSeek(3)]</visible>
 				<include>Visible_Fade</include>
@@ -3867,6 +3898,23 @@
 					<midtexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</midtexture>
 					<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 				</control>
+				<control type="ranges">
+ 					<height>10</height>
+ 					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+ 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
+ 					<lefttexture>colors/white.png</lefttexture>
+ 					<midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
+ 					<righttexture>colors/white.png</righttexture>
+ 					<info>Player.Cutlist</info>
+ 				</control>
+ 				<control type="ranges">
+ 					<top>4</top>
+ 					<height>6</height>
+ 					<colordiffuse>$VAR[SkinColorVar]</colordiffuse>
+ 					<texturebg border="3" colordiffuse="00FFFFFF">colors/white.png</texturebg>
+ 					<righttexture>colors/white.png</righttexture>
+ 					<info>Player.Chapters</info>
+ 				</control>
 				<control type="slider" id="401">
 					<left>5</left>
 					<top>-5</top>

@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
+	<onload condition="Integer.IsGreater(ListItem.PercentPlayed,0)">SetFocus(446)</onload>
 	<onload condition="Skin.HasSetting(tomatometerallcritics) + !String.IsEmpty(ListItem.Rating(tomatometerallcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallcritics)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometeravgcritics) + !String.IsEmpty(ListItem.Rating(tomatometeravgcritics))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometeravgcritics)] * 10)"',prop=rotten)</onload>
 	<onload condition="Skin.HasSetting(tomatometerallaudience) + !String.IsEmpty(ListItem.Rating(tomatometerallaudience))">RunScript(script.embuary.helper,action=calc,do='"int($INFO[ListItem.Rating(tomatometerallaudience)] * 10)"',prop=rotten)</onload>
@@ -199,6 +200,13 @@
 						<param name="icon" value="icons/filemanager.png" />
 						<param name="label" value="$LOCALIZE[1024]" />
 					</include>
+					<include content="InfoDialogSmallButton" condition="Integer.IsGreater(ListItem.PercentPlayed,0) + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)">
+ 						<param name="id" value="446" />
+ 						<param name="icon" value="icons/infodialogs/resume.png" />
+ 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
+ 						<param name="onclick_2" value="SendClick(9)" />
+ 						<param name="label" value="$LOCALIZE[13362]" />
+ 					</include>
 					<include content="InfoDialogSmallButton" condition="!String.IsEmpty(ListItem.Trailer) + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]">
 						<param name="id" value="439" />
 						<param name="icon" value="icons/infodialogs/trailer.png" />
@@ -207,11 +215,11 @@
 						<param name="onclick_3" value="PlayMedia($ESCINFO[ListItem.Trailer],false,1)" />
 						<param name="label" value="$LOCALIZE[20410]" />
 					</include>
-					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">
+					<include content="InfoDialogSmallButton" condition="System.HasAddon(script.preshowexperience) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">
 						<param name="id" value="441" />
-						<param name="icon" value="icons/infodialogs/cinema.png" />
+						<param name="icon" value="icons/infodialogs/preshowexp.png" />
 						<param name="onclick_1" value="Dialog.Close(MovieInformation)" />
-						<param name="onclick_2" value="RunScript(script.cinemavision,experience)" />
+						<param name="onclick_2" value="RunScript(script.preshowexperience,experience)" />
 						<param name="label" value="$LOCALIZE[31003]" />
 					</include>
 					<include content="InfoDialogSmallButton" condition="!Skin.HasSetting(show_infodialogbuttonextendedinfo) + System.AddonIsEnabled(script.embuary.info) + !StringIsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DbType,movie)">
@@ -298,28 +306,9 @@
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
 			</control>
-			<!-- WIP -->
-			<!--control type="label">
-				<right>50</right>
-				<top>604</top>
-				<align>right</align>
-				<width>1400</width>
-				<height>44</height>
-				<font>font20_title</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
-				<haspath>true</haspath>
-				<label>$LOCALIZE[21802] : $INFO[ListItem.Size]</label>
-				<visible>Control.HasFocus(8) + !String.IsEmpty(ListItem.Size) + !String.StartsWith(ListItem.Size,0.00)</visible>
-				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="Window.IsVisible(script-embuary-video.xml) | Window.IsVisible(script-embuary-person.xml) | Window.IsVisible(script-embuary-image.xml)">Conditional</animation>
-			</control-->
 			<control type="label">
 				<right>50</right>
-				<top>604</top>
+				<top>600</top>
 				<align>right</align>
 				<width>1400</width>
 				<height>44</height>

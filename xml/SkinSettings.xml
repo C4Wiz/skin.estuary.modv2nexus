@@ -518,6 +518,16 @@
  					<selected>System.HasAddon(script.input.adsp)</selected>
  					<include>DefaultSettingButton</include>
  				</control>
+ 				<control type="radiobutton" id="328">
+ 					<label>PreShow Experience $INFO[System.AddonVersion(script.preshowexperience),(,)]</label>
+ 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
+ 					<textureradioonnofocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonnofocus>
+ 					<textureradioofffocus colordiffuse="fff02222">buttons/status-off.png</textureradioofffocus>
+ 					<textureradiooffnofocus colordiffuse="fff02222">buttons/status-off.png</textureradiooffnofocus>
+ 					<onclick condition="!System.HasAddon(script.input.preshowexperience)">InstallAddon(script.preshowexperience)</onclick>
+ 					<selected>System.HasAddon(script.preshowexperience)</selected>
+ 					<include>DefaultSettingButton</include>
+ 				</control>
 				<control type="radiobutton" id="310">
 					<label>Sleepy Watchdog $INFO[System.AddonVersion(service.sleepy.watchdog),(,)]</label>
 					<textureradioonfocus colordiffuse="ffffffff">buttons/status-on.png</textureradioonfocus>
@@ -1160,6 +1170,13 @@
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
 				</control>
+				<control type="radiobutton" id="722">
+ 					<label>$LOCALIZE[31655]</label>
+ 					<include>DefaultSettingButton</include>
+ 					<onclick>Skin.ToggleSetting(show_battery)</onclick>
+ 					<selected>Skin.HasSetting(show_battery)</selected>
+ 					<visible>!String.IsEmpty(System.BatteryLevel)</visible>
+ 				</control>
 				<control type="radiobutton" id="717">
 					<label>$LOCALIZE[31592]</label>
 					<include>DefaultSettingButton</include>
@@ -1334,6 +1351,7 @@
 					<include>DefaultSettingButton</include>
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
+					<enable>Skin.HasSetting(show_fanart)</enable>
 				</control>
 				<control type="button" id="607">
 					<label>$LOCALIZE[31310]</label>
