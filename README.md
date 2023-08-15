@@ -74,6 +74,12 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
+- .6
+   * improved scrollbars
+   * add title and year info to wall view items
+   * disable autoclose OSD when touchmode is selected
+   * improved background handling
+
 - .5
    * add support for PreShow Experience
    * add TV Show count/seen/unseen to settings shortcut widget
