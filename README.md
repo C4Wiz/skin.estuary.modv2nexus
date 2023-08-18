@@ -36,6 +36,9 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
+- +1.5
+  * Fix MediaFlagOSD HDR10/HDR10+ Regression
+
 - +1.4
   * Adjust auto stop timer to 5min, 10imn, 15min, 20min, 30min
   * Moved Chapter display down out of title overlap
