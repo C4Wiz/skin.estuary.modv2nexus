@@ -77,6 +77,10 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
+- .7
+   * revert back extra info on cast list
+   * fix wrong actors list showing on movies with same titles but different year
+
 - .6
    * improved scrollbars
    * add title and year info to wall view items
