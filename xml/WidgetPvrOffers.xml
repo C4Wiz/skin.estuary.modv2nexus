@@ -67,7 +67,7 @@
                             <height>70</height>
                             <label>$INFO[ListItem.Label] $INFO[ListItem.Property(StartTime),(,)]</label>
                             <font>font12</font>
-                            <shadowcolor>text_shadow</shadowcolor>
+                            <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <aligny>top</aligny>
                             <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
@@ -79,7 +79,7 @@
                             <height>65</height>
                             <label>$INFO[ListItem.Label2]</label>
                             <font>font12</font>
-                            <shadowcolor>text_shadow</shadowcolor>
+                            <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <aligny>top</aligny>
                             <visible>![[!Skin.HasSetting(HideWidgetLabels) + !Skin.HasSetting(HidePvrWidgetInfo)] + Window.IsVisible(Home)]</visible>
@@ -90,7 +90,7 @@
                             <width>36</width>
                             <height>36</height>
                             <texture>icons/infodialogs/timer.png</texture>
-                            <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
+                            <visible>!Skin.HasSetting(ShowPVRStatus) + String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>
@@ -180,7 +180,7 @@
                             <height>70</height>
                             <label>$INFO[ListItem.Label] $INFO[ListItem.Property(StartTime),(,)]</label>
                             <font>font12</font>
-                            <shadowcolor>text_shadow</shadowcolor>
+                            <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <scroll>true</scroll>
                             <aligny>top</aligny>
@@ -193,7 +193,7 @@
                             <height>65</height>
                             <label>$INFO[ListItem.Label2]</label>
                             <font>font12</font>
-                            <shadowcolor>text_shadow</shadowcolor>
+                            <shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
                             <align>center</align>
                             <scroll>true</scroll>
                             <aligny>top</aligny>
@@ -205,7 +205,7 @@
                             <width>36</width>
                             <height>36</height>
                             <texture>icons/infodialogs/timer.png</texture>
-                            <visible>String.IsEqual(ListItem.Property(HasTimer),True)</visible>
+                            <visible>!Skin.HasSetting(ShowPVRStatus) + String.IsEqual(ListItem.Property(HasTimer),True)</visible>
                         </control>
                         <control type="image">
                             <left>20</left>

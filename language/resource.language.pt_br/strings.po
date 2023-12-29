@@ -1,6 +1,6 @@
 # Addon Name: Estuary MOD v2
 # Addon id: skin.estuary.modv2
-# Addon Provider: Guilouz
+# Addon Provider: Guilouz, PvD
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -1155,11 +1155,6 @@ msgstr "Próximo episódio"
 msgctxt "#31276"
 msgid "Disable zoom effect"
 msgstr "Desativar efeito de zoom"
-
-#: /xml/SkinSettings.xml
-msgctxt "#31277"
-msgid "Hide notification popup during playback"
-msgstr "Ocultar pop-up de notificação durante a reprodução"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31278"

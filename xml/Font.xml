@@ -3,10 +3,10 @@
 	<fontset id="Default" idloc="15109">
 		<!-- Normal Fonts -->
 		<font>
- 			<name>font05</name>
- 			<filename>NotoSans-Regular.ttf</filename>
- 			<size>12</size>
- 		</font>
+			<name>font05</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>12</size>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>NotoSans-Regular.ttf</filename>
@@ -79,6 +79,12 @@
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>37</size>
 			<style>lighten</style>
+		</font>
+		<font>
+			<name>font37_bold</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>37</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>font45</name>
@@ -599,11 +605,11 @@
 	<fontset id="Arial" idloc="31053">
 		<!-- Arial Font better for non English -->
 		<font>
- 			<name>font05</name>
- 			<filename>arial.ttf</filename>
- 			<size>12</size>
- 			<style>lighten</style>
- 		</font>
+			<name>font05</name>
+			<filename>arial.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>arial.ttf</filename>
@@ -664,6 +670,12 @@
 			<size>37</size>
 		</font>
 		<font>
+			<name>font37_bold</name>
+			<filename>arial.ttf</filename>
+			<size>37</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>font45</name>
 			<filename>arial.ttf</filename>
 			<size>45</size>
@@ -676,7 +688,7 @@
 		</font>
 		<font>
 			<name>font_clock</name>
-			<filename>Roboto-Thin.ttf</filename>
+			<filename>arial.ttf</filename>
 			<size>70</size>
 		</font>
 		<!-- Title Fonts -->
@@ -1174,11 +1186,11 @@
 	<fontset id="Arial Unicode MS" idloc="31644">
 		<!-- Normal Fonts -->
 		<font>
- 			<name>font05</name>
- 			<filename>ArialUnicodeMS.ttf</filename>
- 			<size>12</size>
- 			<style>lighten</style>
- 		</font>
+			<name>font05</name>
+			<filename>ArialUnicodeMS.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>ArialUnicodeMS.ttf</filename>
@@ -1253,6 +1265,12 @@
 			<style>lighten</style>
 		</font>
 		<font>
+			<name>font37_bold</name>
+			<filename>ArialUnicodeMS.ttf</filename>
+			<size>37</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>font45</name>
 			<filename>ArialUnicodeMS.ttf</filename>
 			<size>45</size>
@@ -1266,7 +1284,7 @@
 		</font>
 		<font>
 			<name>font_clock</name>
-			<filename>Roboto-Thin.ttf</filename>
+			<filename>ArialUnicodeMS.ttf</filename>
 			<size>70</size>
 		</font>
 		<font>
@@ -1776,11 +1794,11 @@
 	<fontset id="Economica" idloc="31619">
 		<!-- Normal Fonts -->
 		<font>
- 			<name>font05</name>
- 			<filename>Economica-Regular.ttf</filename>
- 			<size>12</size>
- 			<style>lighten</style>
- 		</font>
+			<name>font05</name>
+			<filename>Economica-Regular.ttf</filename>
+			<size>12</size>
+			<style>lighten</style>
+		</font>
 		<font>
 			<name>font09</name>
 			<filename>Economica-Regular.ttf</filename>
@@ -1853,6 +1871,11 @@
 			<filename>Economica-Regular.ttf</filename>
 			<size>37</size>
 			<style>lighten</style>
+		</font>
+		<font>
+			<name>font37_bold</name>
+			<filename>Economica-Bold.ttf</filename>
+			<size>37</size>
 		</font>
 		<font>
 			<name>font45</name>

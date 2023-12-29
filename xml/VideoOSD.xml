@@ -41,7 +41,7 @@
 				<bottom>5</bottom>
 				<width>100%</width>
 				<height>60</height>
-				<itemgap>12</itemgap>
+				<itemgap>2</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
 				<onup>87</onup>
@@ -109,6 +109,20 @@
 					</include>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
+				<control type="radiobutton" id="609">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/speeddown.png"/>
+					</include>
+					<onclick>PlayerControl(TempoDown)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + Player.TempoEnabled</visible>
+				</control>
+				<control type="radiobutton" id="610">
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/speedup.png"/>
+					</include>
+					<onclick>PlayerControl(TempoUp)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + Player.TempoEnabled</visible>
+				</control>
 				<control type="radiobutton" id="608">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/channelswitch.png"/>
@@ -150,24 +164,11 @@
 					<visible>VideoPlayer.HasMenu</visible>
 				</control>
 				<control type="radiobutton" id="606">
-					<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/record-white.png</textureradioonfocus>
-					<textureradioonnofocus>osd/fullscreen/buttons/record-white.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="white">osd/fullscreen/buttons/record.png</textureradioofffocus>
-					<textureradiooffnofocus>osd/fullscreen/buttons/record.png</textureradiooffnofocus>
-					<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo-76.png</texturefocus>
-					<width>56</width>
-					<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-						<effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
-						<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
-					</animation>
-					<height>56</height>
-					<radiowidth>54</radiowidth>
-					<radioheight>54</radioheight>
-					<font></font>
-					<texturenofocus />
-					<radioposx>1</radioposx>
-					<radioposy>0</radioposy>
-					<selected>!PVR.IsRecordingPlayingChannel</selected>
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/record-white.png"/>
+						<param name="color_selected" value="FFAA0000" />
+					</include>
+					<selected>PVR.IsRecordingPlayingChannel</selected>
 					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
 					<visible>PVR.CanRecordPlayingChannel + VideoPlayer.Content(livetv)</visible>
 				</control>
@@ -175,8 +176,8 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/information.png"/>
 					</include>
-					<onclick condition="[Pvr.IsPlayingTV | Pvr.IsPlayingRecording] | [Player.Playing + Skin.HasSetting(ExtendedOSDInfo)]">ActivateWindow(1138)</onclick>
- 					<onclick condition="!Pvr.IsPlayingTV + !Pvr.IsPlayingRecording + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
+					<onclick condition="[Pvr.IsPlayingTV | Pvr.IsPlayingRecording] | VideoPlayer.Content(musicvideos) | Player.IsInternetStream | [Player.Playing + Skin.HasSetting(ExtendedOSDInfo)]">ActivateWindow(1138)</onclick>
+					<onclick condition="!Pvr.IsPlayingTV + !Pvr.IsPlayingRecording + !VideoPlayer.Content(musicvideos) + !Player.IsInternetStream + !Skin.HasSetting(ExtendedOSDInfo)">ActivateWindow(fullscreeninfo)</onclick>
 					<visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
@@ -232,7 +233,7 @@
 					</include>
 					<onclick>ActivateWindow(1122)</onclick>
 					<visible>!VideoPlayer.Content(livetv) + ![VideoPlayer.HasMenu + System.HasMediaDVD]  + !VideoPlayer.Content(musicvideos) + !String.Contains(Player.Art(thumb),ytimg) + !VideoPlayer.Content(files)</visible>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + !Skin.HasSetting(VideoInfo_MovieCastList)</visible>
 				</control>
 				<control type="radiobutton" id="703">
 					<include content="OSDButton">
@@ -264,14 +265,15 @@
 					</include>
 					<onclick condition="!Skin.HasSetting(SimplyfiedOSDVideo)">AudioNextLanguage</onclick>
 					<onclick condition="Skin.HasSetting(SimplyfiedOSDVideo)">ActivateWindow(osdaudiosettings)</onclick>
+					<visible>Skin.HasSetting(SimplyfiedOSDVideo) | Integer.IsGreater(VideoPlayer.AudioStreamCount,1)</visible>
 				</control>
 				<control type="radiobutton" id="706">
- 					<include content="OSDButton">
- 						<param name="texture" value="osd/fullscreen/buttons/dsp.png"/>
- 					</include>
- 					<onclick>RunScript(script.input.adsp)</onclick>
- 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + System.HasAddon(script.input.adsp)</visible>
- 				</control>
+					<include content="OSDButton">
+						<param name="texture" value="osd/fullscreen/buttons/dsp.png"/>
+					</include>
+					<onclick>RunScript(script.input.adsp)</onclick>
+					<visible>!Skin.HasSetting(SimplyfiedOSDVideo) + System.HasAddon(script.input.adsp)</visible>
+				</control>
 				<control type="radiobutton" id="700">
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/bookmarks.png"/>
@@ -283,7 +285,6 @@
 					<include content="OSDButton">
 						<param name="texture" value="osd/fullscreen/buttons/processinfo.png"/>
 					</include>
-					<onclick>Action(Close)</onclick>
 					<onclick>ActivateWindow(playerprocessinfo)</onclick>
 					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
@@ -316,7 +317,6 @@
 					<onclick>SetProperty(settingslist_content,osd,home)</onclick>
 					<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
 					<onclick>ActivateWindow(1101)</onclick>
-					<visible>!Skin.HasSetting(SimplyfiedOSDVideo)</visible>
 				</control>
 			</control>
 			<control type="group">

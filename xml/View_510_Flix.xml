@@ -132,14 +132,24 @@
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<visible>Container.Content(episodes)</visible>
 			</control>
-			<control type="image">
-				<left>38</left>
-				<top>192</top>
-				<width>32</width>
-				<height>32</height>
-				<texture>$VAR[WallWatchedIconVar]</texture>
-				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists)</visible>
+			<control type="group">
+				<left>35</left>
+				<top>155</top>
+				<visible>!String.StartsWith(Container.FolderPath,plugin://plugin.video) + !Container.Content(artists) + [ListItem.IsRecording | ListItem.HasReminder | ListItem.HasTimer | ListItem.IsCollection | ListItem.IsPlaying | ListItem.IsResumable | Integer.IsGreater(ListItem.Playcount,0) | ListItem.HasArchive]</visible>
+				<control type="image">
+					<width>70</width>
+					<height>70</height>
+					<texture>overlays/overlay-bg.png</texture>
+				</control>
+				<control type="image">
+					<left>3</left>
+					<top>37</top>
+					<width>32</width>
+					<height>32</height>
+					<texture>$VAR[WallWatchedIconVar]</texture>
+				</control>
 			</control>
+
 			<control type="image">
 				<left>35</left>
 				<top>10</top>
@@ -307,7 +317,7 @@
 				<right>20</right>
 				<label>$VAR[MainLabelMoviesSetsInfoVar]</label>
 				<font>font52_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<scroll>true</scroll>
@@ -319,7 +329,7 @@
 				<right>20</right>
 				<label>[B]$VAR[VideoInfoSubLabelVar][/B]</label>
 				<font>fontplot2</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -332,7 +342,7 @@
 				<right>20</right>
 				<label>$VAR[VideoInfoSubLabelVar]</label>
 				<font>font30_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<height>65</height>
 				<align>left</align>
 				<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -349,7 +359,7 @@
 					<top>53</top>
 					<height>70</height>
 					<width>1100</width>
-					<itemgap>5</itemgap>
+					<itemgap>3</itemgap>
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -358,39 +368,22 @@
 					</include>
 					<include content="MediaFlag">
 						<param name="width" value="5" />
-						<param name="top" value="5" />
 					</include>
 					<include content="MediaFlagsRatings">
 						<param name="infolabel_prefix"/>
 					</include>
-					<control type="group">
-						<width>5</width>
-						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
-						<include content="MediaFlag">
-							<param name="width" value="0" />
-						</include>
-					</control>
-					<control type="group">
-						<width>250</width>
-						<top>5</top>
-						<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
-						<include content="MediaFlag">
-							<param name="texture" value="flags/lastseen.png" />
-							<param name="width" value="250" />
-						</include>
-						<control type="label">
-							<width>192</width>
-							<top>-1</top>
-							<height>50</height>
-							<posx>54</posx>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>font_flag</font>
-							<scroll>true</scroll>
-							<label>$INFO[ListItem.LastPlayed]</label>
-							<textcolor>$VAR[MediaFlagsColorVar]</textcolor>
-						</control>
-					</control>
+					<include content="MediaFlag">
+						<param name="width" value="0" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="flags/lastseen.png" />
+						<param name="width" value="200" />
+						<param name="label_width" value="146" />
+						<param name="label_left" value="50" />
+						<param name="label" value="$INFO[ListItem.LastPlayed]" />
+						<param name="visible" value="!ListItem.IsCollection + !String.IsEmpty(ListItem.LastPlayed)" />
+					</include>
 				</control>
 				<control type="list" id="51000">
 					<visible>ListItem.IsCollection</visible>
@@ -429,12 +422,7 @@
 			</control>
 			<control type="textbox">
 				<include>OpenClose_Left</include>
-				<include content="ItemTop" condition="String.StartsWith(Container.FolderPath,plugin://plugin.video)">
-					<param name="top">235</param>
-				</include>
-				<include content="ItemTop" condition="!String.StartsWith(Container.FolderPath,plugin://plugin.video)">
-					<param name="top">310</param>
-				</include>
+				<top>310</top>
 				<left>50</left>
 				<width>1100</width>
 				<bottom>605</bottom>

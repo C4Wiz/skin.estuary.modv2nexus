@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary MOD v2
 # Addon id: skin.estuary.modv2
-# Addon Provider: Guilouz
+# Addon Provider: Guilouz, PvD
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -1109,11 +1109,6 @@ msgstr ""
 #: /xml/SkinSettings.xml
 msgctxt "#31276"
 msgid "Disable zoom effect"
-msgstr ""
-
-#: /xml/SkinSettings.xml
-msgctxt "#31277"
-msgid "Hide notification popup during playback"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -2544,7 +2539,7 @@ msgstr ""
 #: DialogPlayerProcessInfo
 
 msgctxt "#31610"
-msgid "Display"
+msgid "Display Mode"
 msgstr ""
 
 msgctxt "#31611"
@@ -2693,6 +2688,7 @@ msgid "High Transparency of Seekbar Background"
 msgstr ""
 
 #: /xml/MyVideoNav
+
 msgctxt "#31643"
 msgid "Use Poster View"
 msgstr ""
@@ -2702,9 +2698,12 @@ msgid "Arial Unicode based"
 msgstr ""
 
 #: /xml/Includes_MediaMenu.xml
+
 msgctxt "#31645"
 msgid "Quick Navigation"
 msgstr ""
+
+#: /xml/MusicOSD.xml
 
 msgctxt "#31646"
 msgid "Black Screen : off"
@@ -2750,7 +2749,67 @@ msgstr ""
 
 msgctxt "#31657"
 msgid "Show Internet Status"
-msgstr "Zeige Internet Status"
+msgstr ""
+
+msgctxt "#31658"
+msgid "Show own Level Colors"
+msgstr ""
+
+msgctxt "#31659"
+msgid "Color of Text Shadow"
+msgstr ""
+
+msgctxt "#31660"
+msgid "current Time"
+msgstr ""
+msgctxt "#31661"
+
+msgid "Decrease Play speed"
+msgstr ""
+
+msgctxt "#31662"
+msgid "Increase Play speed"
+msgstr ""
+
+#: SkinSettings.xml
+
+msgctxt "#31663"
+msgid "Busy Spinner"
+msgstr ""
+
+#: Video OSD
+
+msgctxt "#31664"
+msgid "TUN"
+msgstr ""
+
+msgctxt "#31665"
+msgid "SIG"
+msgstr ""
+
+msgctxt "#31666"
+msgid "SNR"
+msgstr ""
+
+msgctxt "#31667"
+msgid "REC"
+msgstr ""
+
+msgctxt "#31668"
+msgid "Hide SIG/SNR flags if not provided by Backend Driver"
+msgstr ""
+
+#: 1137 Settings Flags
+
+msgctxt "#31669"
+msgid "Show Date added to Library"
+msgstr ""
+
+#: Skinsettings
+
+msgctxt "#31670"
+msgid "Show Video Resolution on Video start (Amlogic Hardware only)"
+msgstr ""
 
 #: - Modified Start -
 

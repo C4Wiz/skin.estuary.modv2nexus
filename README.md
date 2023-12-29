@@ -76,113 +76,222 @@ supports animated poster only.
   * Changed SettingsSystemIfo.xml to original Estuary layout and made more readable
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
-### 4.1.2 ###
-- .7
-   * revert back extra info on cast list
-   * fix wrong actors list showing on movies with same titles but different year
-   * add Internet Connection Status to Home screen
-   * Merge PR #130 (disappearing side panel on busy spinner)
 
-- .6
-   * improved scrollbars
-   * add title and year info to wall view items
-   * disable autoclose OSD when touchmode is selected
-   * improved background handling
-
-- .5
-   * add support for PreShow Experience
-   * add TV Show count/seen/unseen to settings shortcut widget
-   * improved actors list in video info
-
+### 4.2.0 ###
 - .4
-   * Update Player Process Info (again thanks to frodo19)
-   * Move Chapter/Cutmarkers to seekbar
-   * improved battery level graphics
-   * Fix missing video genre fanart even if fanart pack is installed
-   * add runtime (duration) to PVR search results, minor improvements
-   * add a resume button to video info (DialogVideoInfo.xml)
+  * missing condition of showing disc art on visualisations fixed
+  
 
 - .3
-   * reverted image type back to multiimage for weather widget pt.2
-   * Introducing battery level display/symbol on Top Bar in Home screen for mobile devices
+  * function 'getKodiSetting' to helper added
+  * some navigation issues in Fullscreen video info fixed
+  * slide animation fixed if custom widgets are used
+  
 
 - .2
-   * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
-   * adjustments on mosaic views
-   * add animation to PVR NextUp
-   * reverted image type back to multiimage for weather widget
+  * code improvements of rotating media (CD/DVD/BluRay) in Video-/Audio OSD
+  * add active colors to buttons (dim, random playback) - audio OSD
+  * improved lyrics scrolling text view (cu-lrclyrics) 
+  * add calculate function to helpers.py
+  * improve process info dialog
+  * replace calculate function of embuary helper with own functions in video info dialog.
+  * remove embuary helper addon from mandatory addons
 
- - .1
-   * minor adjustments
-   * fix player plot display on info if small Video OSD is selected
-   
+
+- .1
+  * Flag "added to library" added
+  * Bug in video OSD fixed
+  * smaller code changes
+  * slovakian language strings updated
+
+
+- .0
+  * Media flags completely revised (uniform size and improved common code basis)
+  * missing music info on radio broadcasts fixed 
+
+
+### 4.1.3 ###
+- .5
+  * missing poster in OSD while playing files fixed
+  * Slovakian language strings added
+  * Netherland language strings updated
+
+
+- .4
+  * some icons added (Samsung TV, Pluto TV, Telekom)
+  * Code Improvements on full video OSD
+  * OSD media flags fixed/improved
+  * OSD hide sound button if there are only a single audio stream (thanks biegleux)
+  * Option added for hiding SIG/SNR flags if not provided by Backend Driver (returns always zero)
+
+
+- .3
+  * fix several position adjustments on small Video OSD
+  * add PVR device number flag if PVR stream device has numbered (#x) labels
+  
+
+- .2
+  * show PVR SIG and SNR flags only when LiveTV or Radio is playing
+  * fix content paths of pvr widgets (home screen)
+  * remove obsolete DialogFavourites.xml
+  * fade out extended progress bar when music visualisation is active
+  * some seasonal backgrounds changed
+  * add more busy spinners
+
+
+- .1
+  * added several busy spinners
+  * update deprecated player info
+  * improved OSD code grouping, replace filenames with window names
+
+
+- .0
+  * introducing speed in-/decrease buttons in video OSD
+  * control adjustments in several views
+  * last artifacts of skinhelper code removed
+
+
+### 4.1.2 ###
+- .10
+  * revert partial code of time display selection in video OSD
+  * introducing new dynamic default CD cover (music OSD)
+
+
+- .9
+  * introducing time display selection on music OSD/Skin settings
+  * fix navigation issues on several OSD dialogs
+
+
+- .8
+  * add some icons to extras/icons (thanks NeoCortex)
+  * add custom colors to battery level indicator (selectable via skin settings)
+  * customize text shadow color in skin settings
+  * improvements in embuary dialogs
+  * improved Internet Connection Status
+
+
+- .7
+  * revert back extra info on cast list
+  * fix wrong actors list showing on movies with same titles but different year
+  * add Internet Connection Status to Home screen
+  * Merge PR #130 (disappearing side panel on busy spinner)
+  
+
+- .6
+  * improved scrollbars
+  * add title and year info to wall view items
+  * disable autoclose OSD when touchmode is selected
+  * improved background image handling (issue #128)
+
+
+- .5
+  * add support for PreShow Experience
+  * add TV Show count/seen/unseen to settings shortcut widget
+  * improved actors list in video info
+
+- .4
+  * Update Player Process Info (again thanks to frodo19)
+  * Move Chapter/Cutmarkers to seekbar
+  * improved battery level graphics
+  * Option "Hide notifications while Playback" removed
+  * Fix missing video genre fanart even if fanart pack is installed
+  * add runtime (duration) to PVR search results, minor improvements
+  * add a resume button to video info (DialogVideoInfo.xml)
+
+
+- .3
+  * reverted image type back to multiimage for weather widget pt.2
+  * Introducing battery level display/symbol on Top Bar in Home screen for mobile devices
+  
+
+- .2
+  * fix wrong plot position on PVR Icon Wall when "show channel groups" on EPG grid is selected
+  * adjustments on mosaic views
+  * add animation to PVR NextUp
+  * reverted image type back to multiimage for weather widget
+
+
+- .1
+  * minor adjustments
+  * fix player plot display on info if small Video OSD is selected
+
+
 - .0
   * introducing auto stop timer (stop player after an amount of time when player is paused, configurable)
-   * fix condition (issue #123)
-   * add season label to flix view items (tv show season view)
-   * convert all home images to baseline JPEG format specification
-   * fix pause bug on PVR related OSD Info, remove pause on info for LiveTV/Recordings
+  * fix condition (issue #123)
+  * add season label to flix view items (tv show season view)
+  * convert all home images to baseline JPEG format specification
+  * fix pause bug on PVR related OSD Info, remove pause on info for LiveTV/Recordings
+
 
 ### 4.1.1 ###
 - .14
-   * improving extended info views (Embuary)
-   * smaller fixes and improvements
-   * add season/episode label to flix view (tv show episode view)
+  * improving extended info views (Embuary)
+  * smaller fixes and improvements
+  * add season/episode label to flix view (tv show episode view)
+
 
 - .13
   * fix missing font definitions
   * fix mistakenly displayed chaptercount in music player
   * smaller fixes
 
+
 - .12
   * add support for Android Super Partition (issue #122)
   * add title info to Mosaic view
+
+
 - .11
-   * fix wrong startup behaviour (Issue #120) if startup window and startup action is set (Interface, Startup)
-   * add Embuary Helper to skin dependencies
-   * avoid showing PVR Nextup if EPG isn't available
-   * fix overlapping labels in video OSD
-   * more compact main menu
+  * fix wrong startup behaviour (issue #120) if startup window and startup action is set (Interface, Startup)
+  * add Embuary Helper to skin dependencies 
+  * avoid showing PVR Nextup if EPG isn't available
+  * fix overlapping labels in video OSD
+  * more compact main menu
 
 - .10
-   * fix "switch to last channel" in video OSD
-   * some icons added
-   * enable flix view for tvshow seasons
-   * music OSD settings menu optimized
-   * introduce Radio RDS info screen
-   * set opacity of music fanart similar to background opacity
+  * fix "switch to last channel" in video OSD
+  * some icons added
+  * enable flix view for tvshow seasons
+  * music OSD settings menu optimized
+  * introduce Radio RDS info screen
+  * set opacity of music fanart similar to background opacity
 
+ 
 - .9
-   * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
-   * fix addon activation of lrclyrics in Music OSD settings
-   * add a "Black Screen" button to music OSD: show a black screen while playing music
-   * fix live TV video OSD flickering on channel/window changes
-   * smaller improvements in PVR section
+  * fix display of PVR status icon (Record, Timer, Scheduler, Premiered, ...) on EPG grid
+  * fix addon activation of lrclyrics in Music OSD settings
+  * add a "Black Screen" button to music OSD: show a black screen while playing music
+  * fix live TV video OSD flickering on channel/window changes
+  * smaller improvements in PVR section
+
 
 - .8
-   * quick fix of helper script (cause kodi to crash when file path is a plugin call)
+  * quick fix of helper script (cause kodi to crash when file path is a plugin call)
+
 
 - .7
-   * calculate/display size of a file object by helper script
-   * remove horizontal EPG grid layout
-   * add EPG navigation entry to side blade (PVR EPG only)
-   * add progress indicator to recording widget (PVR) 
-   * smaller modifications on several views
-
+  * calculate/display size of a file object by helper script
+  * remove horizontal EPG grid layout
+  * add EPG navigation entry to side blade (PVR EPG only)
+  * add progress indicator to recording widget (PVR) 
+  * smaller modifications on several views
+  
 - .6
-   * fix overlapping genre/plotline in Flix View
-   * extend option play/info for home widgets to music video widgets
-   * add dependencies for estuary helper/info to widget selection menu entries (tvshows)
-   * smaller improvements and updates on several files
-   * introducing 'Arial Unicode MS' as a new font style supporting more languages (mainly asian region)
+  * fix overlapping genre/plotline in Flix View
+  * extend option play/info for home widgets to music video widgets
+  * add dependencies for estuary helper/info to widget selection menu entries (tvshows)
+  * smaller improvements and updates on several files
+  * introducing 'Arial Unicode MS' as a new font style supporting more languages (mainly asian region)
+  
 
 - .5
-   * fix missing thumb/icon on extended list view for some plugins
-   * disable/enable addon 'CU LrcLyrics' (song text) via script
-   * improved Music OSD settings
-   * fix missing actor pictures on actors category for musicvideos
-   * fix missing artists pictures on actors category for musicvideos
-   * add artist pictures to video info dialog
+  * fix missing thumb/icon on extended list view for some plugins
+  * disable/enable addon 'CU LrcLyrics' (song text) via script
+  * improved Music OSD settings
+  * fix missing artists pictures on actors category for musicvideos
+  * add artist pictures to video info dialog
+
 
 - .4
   * improved music OSD
@@ -193,35 +302,40 @@ supports animated poster only.
   * fix slightly wrong aspect ratio for posters in views/info/OSD
   * fix now unsupported background opacity (Nexus 20.1) by replacing multiimage controls with image controls
 
+
 - .3
-   * fix wrong behaviour of seekbar in music OSD
+  * fix wrong behaviour of seekbar in music OSD
+  
 
 - .2
-   * remove doubled episode title on PVR timer widget
-   * remove overlapping between title and plot in list view
-   * smaller fixes
+  * remove doubled episode title on PVR timer widget
+  * remove overlapping between title and plot in list view
+  * smaller fixes
+
 
 - .1
-   * improving + removing fanart/landscape from seek bar
-   * fix display of long titles/filenames on list view (issue #114)
+  * improving + removing fanart/landscape from seek bar
+  * fix display of long titles/filenames on list view (issue #114)
+
 
 - .0
-   * coloured flags updated (Thanks to Frodo19)
-   * Introducing volume amplification button (DSP) to video OSD
-   * add Audio DSP addon to required addons list
-   * Home images changed
-   * Improvements on Flix view (just one more...)
-   * add transparency option to seekbar background
-   * add missing list view to tvshow episodes
-   * fix TV-14 rating (wrongly shown as MPAA-14)
-   * fix bug on seasonal themes
+  * coloured flags updated (Thanks to Frodo19)
+  * Introducing volume amplification button (DSP) to video OSD
+  * add Audio DSP addon to required addons list
+  * Home images changed
+  * Improvements on Flix view (just one more...)
+  * add transparency option to seekbar background
+  * add missing list view to tvshow episodes
+  * fix TV-14 rating (wrongly shown as MPAA-14)
+  * fix bug on seasonal themes
 
+### 4.1.0 ###
 - .3
-   * Fix missing HDR flag
-   * Move themes back from Textures.xbt to file system
-   * Improved smart paly list (last seen movies)
-   * Add last played flag to flix view
-   
+  * Fix missing HDR flag
+  * Move themes back from Textures.xbt to file system
+  * Improved smart play list (last seen movies)
+  * Add last played flag to flix view
+
 
 - .2
   * Add option for customizing own splash background
@@ -249,7 +363,7 @@ supports animated poster only.
   * avoid flickering in settings window when video sources are shown and icon view is set
 
 
-### 4.0.2+nexus ###
+### 4.0.2 ###
 - .18
   * hungarian language updated
   * flix view improvements (background for sets, movie sets poster)
@@ -390,7 +504,7 @@ supports animated poster only.
   * Introducing Flix Landscape View
   
 
-### 4.0.1+nexus ###
+### 4.0.1 ###
 - .8
   * fix text adjustment in settings
   * fix incorrect shown clearlogo
@@ -446,7 +560,7 @@ supports animated poster only.
   * improved Channel Guide OSD, Channel OSD
   * missing HDR label on Live-TV (PVR) added
   
-### 4.0.0+nexus ###
+### 4.0.0 ###
 - .4
   * add missing hdr type flag in video OSD
   * Settings option for displaying current time/total time and time remaining in small video OSD
@@ -481,7 +595,7 @@ supports animated poster only.
   * Autohide OSD from skin settings removed 
   
 
-### 3.4.0+nexus ###
+### 3.4.0 ###
 - .12
   * fixed incorrect poster overlays in episode view
   * some icons added
@@ -504,3 +618,5 @@ supports animated poster only.
 ![improved PVR event icons](resources/screenshots/screenshot_13.png)
 ![various color...](resources/screenshots/screenshot_14.png)
 ![...and font schemes](resources/screenshots/screenshot_15.png)
+![Audio DSP](resources/screenshots/screenshot_16.png)
+![Flix Landscape](resources/screenshots/screenshot_17.png)

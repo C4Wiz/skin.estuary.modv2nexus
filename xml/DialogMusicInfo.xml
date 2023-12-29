@@ -71,7 +71,7 @@
 					<right>20</right>
 					<label>$VAR[MusicInfoMainLabelVar]</label>
 					<font>font52_title</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<scroll>true</scroll>
@@ -82,7 +82,7 @@
 					<right>20</right>
 					<label>[B]$VAR[MusicInfoSubLabelVar][/B]</label>
 					<font>fontplot2</font>
-					<shadowcolor>text_shadow</shadowcolor>
+					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					<height>65</height>
 					<align>left</align>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
@@ -254,7 +254,7 @@
 						<left>16</left>
 						<top>23</top>
 						<right>20</right>
-						<height>249</height>
+						<height>245</height>
 						<align>left</align>
 						<font>fontplot2</font>
 						<label fallback="19055">$VAR[MusicInfoTextboxVar]</label>
@@ -325,7 +325,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$INFO[ListItem.FileNameAndPath]</label>
 				<visible>Control.HasFocus(6)</visible>
@@ -342,7 +342,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$VAR[DialogMusicInfoThumbBackVar]</label>
 				<visible>Control.HasFocus(138)</visible>
@@ -359,7 +359,7 @@
 				<height>44</height>
 				<font>font20_title</font>
 				<textcolor>FFFFFFFF</textcolor>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<haspath>true</haspath>
 				<label>$LOCALIZE[31504]</label>
 				<visible>Control.HasFocus(1300)</visible>
@@ -403,7 +403,7 @@
 				<height>90</height>
 				<label>$VAR[DialogInfoButtonsVar]</label>
 				<font>font25_title</font>
-				<shadowcolor>text_shadow</shadowcolor>
+				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 				<scroll>true</scroll>
 			</control>
 		</control>
@@ -444,7 +444,7 @@
 				<visible>Control.HasFocus(5002) | [!Control.IsVisible(50) + !Control.IsVisible(5100) + !Control.IsVisible(63000)]</visible>
 				<include>OpenClose_Right</include>
 				<animation effect="fade" time="100">VisibleChange</animation>
-				<animation effect="slide" end="0,149" time="0" condition="String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))">Conditional</animation>
+				<animation effect="slide" end="0,149" time="0" condition="String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))">Conditional</animation>
 			</control>
 			<control type="grouplist" id="6100">
 				<top>0</top>

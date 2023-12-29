@@ -161,7 +161,7 @@
 						<scroll>true</scroll>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<top>0</top>
@@ -173,7 +173,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<animation effect="fade" start="70" end="100" time="300" reversible="false">Focus</animation>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="image">
 						<left>21</left>
@@ -203,7 +203,7 @@
 						<aligny>center</aligny>
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>70</left>
@@ -214,7 +214,7 @@
 						<font>font27</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 					<control type="label">
@@ -226,7 +226,7 @@
 						<aligny>center</aligny>
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 					</control>
 					<control type="label">
 						<left>20</left>
@@ -238,7 +238,7 @@
 						<font>font12</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<textcolor>grey</textcolor>
-						<shadowcolor>text_shadow</shadowcolor>
+						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
 						<visible>Skin.HasSetting(greyedout_watched) + Integer.IsGreater(ListItem.Playcount,0)</visible>
 					</control>
 					<control type="image">
@@ -479,10 +479,21 @@
 						<top>640</top>
 						<width>535</width>
 						<bottom>112</bottom>
+						<align>left</align>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>String.IsEqual(listitem.dbtype,song) + !Container.Content(favourites)</visible>
+						<textcolor>$VAR[SkinColorVar]</textcolor>
+						<visible>!Container.Content(genres)</visible>
+					</control>
+					<control type="textbox" id="15500">
+						<top>640</top>
+						<width>535</width>
+						<bottom>112</bottom>
 						<align>justify</align>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
-						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist) + !Container.Content(favourites)</visible>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(listitem.dbtype,artist) + !String.IsEqual(listitem.dbtype,song) + !Container.Content(favourites)</visible>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<visible>!Container.Content(genres)</visible>
 					</control>
@@ -534,7 +545,7 @@
 						<height>25</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
- 						<font>font25_title</font>
+						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<scroll>true</scroll>
 						<visible>String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)</visible>
