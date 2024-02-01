@@ -55,7 +55,7 @@
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]</label>
 						<wrapmultiline>true</wrapmultiline>
-						<scroll>true</scroll>
+ 						<scroll>true</scroll>
 						<visible>!ListItem.IsCollection + !Skin.HasSetting(hide_pubyear)</visible>
 					</control>
 					<control type="label">
@@ -68,7 +68,7 @@
 						<font>font36_title</font>
 						<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
 						<wrapmultiline>true</wrapmultiline>
-						<scroll>true</scroll>
+ 						<scroll>true</scroll>
 						<visible>!ListItem.IsCollection + Skin.HasSetting(hide_pubyear)</visible>
 					</control>
 					<control type="textbox">
@@ -161,7 +161,7 @@
 						<height>25</height>
 						<align>center</align>
 						<label>$INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
-						<font>font25_title</font>
+ 						<font>font25_title</font>
 						<textcolor>$VAR[SkinColorVar]</textcolor>
 						<scroll>true</scroll>
 						<visible>!ListItem.IsCollection</visible>
@@ -185,12 +185,34 @@
 							<left>10</left>
 							<top>0</top>
 							<width>537</width>
+							<bottom>300</bottom>
+							<align>justify</align>
+							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
 							<bottom>295</bottom>
 							<align>justify</align>
 							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
 							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 							<textcolor>$VAR[SkinColorVar]</textcolor>
 							<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<left>10</left>
+							<top>0</top>
+							<width>537</width>
+							<bottom>295</bottom>
+							<align>justify</align>
+							<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+							<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
+							<textcolor>$VAR[SkinColorVar]</textcolor>
+							<visible>String.IsEmpty(ListItem.Plot)</visible>
 						</control>
 						<control type="textbox">
 							<left>10</left>
@@ -353,9 +375,21 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>!String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="textbox">
+					<left>645</left>
+					<top>673</top>
+					<height>205</height>
+					<right>50</right>
+					<align>justify</align>
+					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>!String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="textbox">
 					<left>645</left>
@@ -365,9 +399,21 @@
 					<align>justify</align>
 					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[ListItem.Plot][/COLOR]</label>
-					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<visible>String.IsEqual(Skin.Font, Arial) + !String.IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="textbox">
+					<left>645</left>
+					<top>673</top>
+					<height>198</height>
+					<right>50</right>
+					<align>justify</align>
+					<autoscroll time="4000" delay="7000" repeat="7000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<label>[B]$VAR[CollectionNumberVar]: [/B][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)][/COLOR]</label>
+					<shadowcolor>text_shadow</shadowcolor>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<visible>String.IsEqual(Skin.Font, Arial) + String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="textbox">
 					<left>645</left>
@@ -488,7 +534,7 @@
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
-				<height>55</height>
+				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -537,12 +583,12 @@
 						<selected>Skin.HasSetting(greyedout_watched)</selected>
 					</control>
 					<control type="radiobutton" id="628">
-						<include>MediaMenuItemsCommonRadio</include>
-						<label>$LOCALIZE[31643]</label>
-						<onclick>Skin.ToggleSetting(use_posters)</onclick>
-						<selected>Skin.HasSetting(use_posters)</selected>
-						<visible>String.StartsWith(Container.FolderPath,plugin://plugin.video) + [Control.IsVisible(506) | Control.IsVisible(507)]</visible>
-					</control>
+ 						<include>MediaMenuItemsCommonRadio</include>
+ 						<label>$LOCALIZE[31643]</label>
+ 						<onclick>Skin.ToggleSetting(use_posters)</onclick>
+ 						<selected>Skin.HasSetting(use_posters)</selected>
+ 						<visible>String.StartsWith(Container.FolderPath,plugin://plugin.video) + [Control.IsVisible(506) | Control.IsVisible(507)]</visible>
+ 					</control>
 					<control type="label" id="203">
 						<include>MediaMenuLabelCommon</include>
 						<label>$LOCALIZE[31020]</label>

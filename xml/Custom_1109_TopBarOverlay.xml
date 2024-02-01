@@ -34,7 +34,7 @@
 				<animation effect="fade" time="150">VisibleChange</animation>
 				<control type="label">
 					<font>font_clock</font>
-					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<top>0</top>
 					<right>20</right>
 					<height>200</height>
@@ -53,7 +53,7 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<control type="label">
 						<label>$INFO[Player.FinishTime,$LOCALIZE[31080] ]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<shadowcolor>text_shadow</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>!String.IsEmpty(Player.Duration)</visible>
@@ -61,39 +61,39 @@
 					</control>
 					<control type="label">
 						<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[31080] ]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<shadowcolor>text_shadow</shadowcolor>
 						<height>100</height>
 						<width>auto</width>
 						<visible>VideoPlayer.HasEpg</visible>
  					</control>
-					<control type="label">
-						<height>36</height>
-						<width>auto</width>
-						<aligny>center</aligny>
-						<label>| </label>
-						<visible>Skin.HasSetting(show_inet) + !String.IsEmpty(System.InternetState) + [!String.IsEmpty(Player.Duration) | VideoPlayer.HasEpg]</visible>
-					</control>
-					<control type="image">
-						<top>11</top>
-						<width>30</width>
-						<height>24</height>
-						<aspectratio aligny="center">keep</aspectratio>
-						<texture>icons/inet_ok.png</texture>
-						<visible>Skin.HasSetting(show_inet) + System.InternetState</visible>
-					</control>
-					<control type="image">
-						<top>11</top>
-						<width>30</width>
-						<height>24</height>
-						<aspectratio aligny="center">keep</aspectratio>
-						<texture>icons/inet_nok.png</texture>
-						<visible>Skin.HasSetting(show_inet) + !System.InternetState + !String.IsEmpty(System.InternetState)</visible>
-					</control>
-					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
-						<param name="left">18</param>
-						<param name="top">8</param>
-						<param name="width">106</param>
-					</include>
+ 					<control type="label">
+ 						<height>36</height>
+ 						<width>auto</width>
+ 						<aligny>center</aligny>
+ 						<label>| </label>
+ 						<visible>Skin.HasSetting(show_inet)</visible>
+ 					</control>
+ 					<control type="image">
+ 						<top>11</top>
+ 						<width>30</width>
+ 						<height>24</height>
+ 						<aspectratio aligny="center">keep</aspectratio>
+ 						<texture>icons/inet_ok.png</texture>
+ 						<visible>Skin.HasSetting(show_inet) + System.InternetState</visible>
+ 					</control>
+ 					<control type="image">
+ 						<top>11</top>
+ 						<width>30</width>
+ 						<height>24</height>
+ 						<aspectratio aligny="center">keep</aspectratio>
+ 						<texture>icons/inet_nok.png</texture>
+ 						<visible>Skin.HasSetting(show_inet) + !System.InternetState</visible>
+ 					</control>
+ 					<include content="BatteryIndicator" condition="Skin.HasSetting(show_battery)">
+ 						<param name="left">18</param>
+ 						<param name="top">8</param>
+ 						<param name="width">106</param>
+ 					</include>
 					<control type="image">
 						<top>2</top>
 						<left>0</left>

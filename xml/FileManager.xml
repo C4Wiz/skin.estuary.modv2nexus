@@ -92,7 +92,7 @@
 				<height>48</height>
 				<aligny>center</aligny>
 				<align>left</align>
-				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+				<shadowcolor>text_shadow</shadowcolor>
 				<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
 			</control>
 			<control type="label" id="102">
@@ -112,7 +112,7 @@
 				<height>48</height>
 				<aligny>center</aligny>
 				<align>right</align>
-				<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+				<shadowcolor>text_shadow</shadowcolor>
 				<label>$INFO[Container(20).CurrentItem,, / ]$INFO[Container(20).NumItems]</label>
 			</control>
 			<control type="label" id="101">

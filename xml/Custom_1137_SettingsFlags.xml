@@ -7,9 +7,9 @@
 			<centerleft>50%</centerleft>
 			<height>570</height>
 			<centertop>50%</centertop>
-			<width>1000</width>
+			<width>800</width>
 			<include content="DialogBackgroundCommons">
-				<param name="width" value="1000" />
+				<param name="width" value="800" />
 				<param name="height" value="570" />
 				<param name="header_label" value="$LOCALIZE[31444]" />
 				<param name="header_id" value="1" />
@@ -18,7 +18,7 @@
 				<left>0</left>
 				<top>80</top>
 				<control type="grouplist" id="11100">
-					<width>1000</width>
+					<width>800</width>
 					<height>490</height>
 					<itemgap>0</itemgap>
 					<onup>11100</onup>
@@ -80,13 +80,7 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_dateairedflag)</selected>
 						<onclick>Skin.ToggleSetting(show_dateairedflag)</onclick>
-					</control>
-					<control type="radiobutton" id="11126">
-						<label>$LOCALIZE[31669]</label>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(show_dateaddedflag)</selected>
-						<onclick>Skin.ToggleSetting(show_dateaddedflag)</onclick>
-					</control>
+					</control>					
 					<control type="radiobutton" id="11117">
 						<label>$LOCALIZE[31451]</label>
 						<include>DefaultSettingButton</include>
@@ -140,12 +134,6 @@
 						<include>DefaultSettingButton</include>
 						<selected>!Skin.HasSetting(show_moviessetflag)</selected>
 						<onclick>Skin.ToggleSetting(show_moviessetflag)</onclick>
-					</control>
-					<control type="radiobutton" id="11122">
-						<label>$LOCALIZE[31456]</label>
-						<include>DefaultSettingButton</include>
-						<selected>!Skin.HasSetting(show_albumsartistlag)</selected>
-						<onclick>Skin.ToggleSetting(show_albumsartistlag)</onclick>
 					</control>
 					<control type="radiobutton" id="11128">
 						<label>$LOCALIZE[31805]</label>

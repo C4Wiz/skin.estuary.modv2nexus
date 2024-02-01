@@ -10,7 +10,7 @@
 			<height>860</height>
 			<include content="DialogBackgroundCommons">
 				<param name="width" value="800" />
-				<param name="height" value="780" />
+				<param name="height" value="80" />
 				<param name="header_label" value="$LOCALIZE[5]" />
 				<param name="header_id" value="" />
 			</include>
@@ -24,16 +24,7 @@
 					<onup>5000</onup>
 					<ondown>5000</ondown>
 					<orientation>vertical</orientation>
-					<control type="button" id="5001">
-						<label>$LOCALIZE[31613]</label>
-						<include>DefaultSettingButton</include>
-						<label2>$VAR[OsdMusicMediaTimeVar]</label2>
-						<description>display media time on osd</description>
-						<onclick condition="String.IsEmpty(Skin.String(OsdMusicMediaTime))">Skin.SetString(OsdMusicMediaTime,1)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),0)">Skin.SetString(OsdMusicMediaTime,1)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(OsdMusicMediaTime),1)">Skin.SetString(OsdMusicMediaTime,0)</onclick>
-					</control>
-					<control type="radiobutton" id="5002">
+					<control type="radiobutton" id="5001">
 						<width>800</width>
 						<include>DialogSettingButton</include>
 						<label>$LOCALIZE[31163]</label>
@@ -84,7 +75,7 @@
 						<onclick condition="System.HasAddon(script.cu.lrclyrics) + Skin.HasSetting(enable_lyrics)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,true)</onclick>
 						<onclick condition="System.HasAddon(script.cu.lrclyrics) + !Skin.HasSetting(enable_lyrics) + !Window.IsActive(script-cu-lrclyrics-main.xml)">RunScript(skin.estuary.modv2,toggleAddonStatus,script.cu.lrclyrics,false)</onclick>
 						<enable>!Window.IsActive(script-cu-lrclyrics-main.xml)</enable>
-						<selected>!Skin.HasSetting(enable_lyrics) | Window.IsActive(script-cu-lrclyrics-main.xml)</selected>
+						<selected>!Skin.HasSetting(enable_lyrics)</selected>
 					</control>
 					<control type="radiobutton" id="50013">
 						<width>800</width>

@@ -34,15 +34,15 @@
 			<visible>![Player.HasVideo + !Skin.HasSetting(background_showvideo)] + [$EXP[widgetHasFocus] | Control.HasFocus(9000) | Control.HasFocus(804) | Control.HasFocus(802) | Control.HasFocus(801)]</visible>
 		</control>
 		<control type="multiimage">
-			<include>FullScreenDimensions</include>
-			<depth>DepthBackground</depth>
-			<aspectratio>scale</aspectratio>
-			<fadetime>600</fadetime>
-			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
-			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="99FFFFFF">$VAR[WeatherFanartVar]</imagepath>
+ 			<include>FullScreenDimensions</include>
+ 			<depth>DepthBackground</depth>
+ 			<aspectratio>scale</aspectratio>
+ 			<fadetime>600</fadetime>
+ 			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+ 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+ 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+ 			<animation effect="fade" time="400">VisibleChange</animation>
+ 			<imagepath background="true" colordiffuse="99FFFFFF">$VAR[WeatherFanartVar]</imagepath>
 			<visible>!Control.HasFocus(9000) + String.IsEqual(Container(9000).ListItem.Property(widget),WeatherWidget) + !String.IsEmpty(Container(9000).ListItem.Property(background)) + Skin.HasSetting(show_fanart) + !Player.HasMedia</visible>
 		</control>
 		<control type="image">
@@ -515,8 +515,7 @@
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.DateTime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
-							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
+							<param name="onclick" value="Skin.String(timerwidget_action)"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + [PVR.HasNonRecordingTVTimer | PVR.IsRecordingTV] + !Skin.HasSetting(hide_recordingtimers) + !Skin.HasSetting(hide_disabledtimers)">
 							<param name="content_path" value="pvr://timers/tv/timers/"/>
@@ -528,8 +527,7 @@
 							<param name="list_id" value="12700"/>
 							<param name="label" value="$INFO[ListItem.Title]$INFO[ListItem.Datetime, - ,]"/>
 							<param name="label2" value="$VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2]"/>
-							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31624)" value="ActivateWindow(pvrtimersetting)"/>
-							<param name="onclick" condition="String.IsEqual(Skin.String(timerwidget_action),31625)" value="ActivateWindow(pvrguideinfo)"/>
+							<param name="onclick" value="Skin.String(timerwidget_action)"/>
 						</include>
 						<include content="WidgetListOffers" condition="System.HasPVRAddon + System.HasAddon(script.service.gto) + System.AddonIsEnabled(script.service.gto) + !Skin.HasSetting(hide_gtowidget)">
 							<param name="content_path" value="plugin://script.service.gto/?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]"/>
@@ -537,7 +535,7 @@
 							<param name="widget_header_focus" value="$INFO[Container(12500).ListItem.Property(StartDate), | ]$INFO[Container(12500).ListItem.Label, - ]$INFO[Container(12500).ListItem.Label2, - ,]"/>
 							<param name="list_id" value="12500"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
-							<param name="label" value="$INFO[ListItem.Label]"/>
+    						<param name="label" value="$INFO[ListItem.Label]"/>
 							<param name="onclick" value="RunPlugin(plugin://script.service.gto/?action=info&amp;item=$INFO[ListItem.Property(item)])"/>
 						</include>
 						<include content="WidgetListChannels" condition="System.HasPVRAddon + !Skin.HasSetting(hide_lastplayedchannels)">
@@ -546,7 +544,7 @@
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31016]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12200).ListItem.Label, | ]$INFO[Container(12200).ListItem.Title, - ,] $VAR[SeasonEpisodeLabel]"/>
-							<param name="widget_target" value="tvchannels"/>
+							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12200"/>
 							<param name="item_limit" value="$VAR[Label_SkinSetting_WidgetNumber]"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
@@ -558,7 +556,7 @@
 							<param name="sortorder" value="descending"/>
 							<param name="widget_header" value="$LOCALIZE[31015]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12300).ListItem.ChannelName, | ]$INFO[Container(12300).ListItem.Label, - ,]$INFO[Container(12300).ListItem.Label2, - ,] $VAR[SeasonEpisodeLabel]"/>
-							<param name="widget_target" value="tvrecordings"/>
+							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12300"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
 							<param name="label2" value="$INFO[ListItem.Title] $VAR[SeasonEpisodeLabel]$INFO[ListItem.Label2, - ,]"/>
@@ -567,7 +565,7 @@
 							<param name="content_path" value="pvr://channels/tv/*"/>
 							<param name="widget_header" value="$LOCALIZE[31361]"/>
 							<param name="widget_header_focus" value="$INFO[Container(12400).ListItem.Label, | ]$INFO[Container(12400).ListItem.Label2, - ,]"/>
-							<param name="widget_target" value="tvchannels"/>
+							<param name="widget_target" value="pvr"/>
 							<param name="list_id" value="12400"/>
 							<param name="item_limit" value="2000"/>
 							<param name="label" value="$INFO[ListItem.ChannelName]"/>
@@ -1109,7 +1107,7 @@
 								<left>20</left>
 								<right>20</right>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>[UPPERCASE]• $LOCALIZE[31031] •[/UPPERCASE]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1122,7 +1120,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>KODI $INFO[System.BuildVersion] - $INFO[System.BuildDate]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1135,7 +1133,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[166] Estuary MOD V2 • $INFO[System.AddonVersion(skin.estuary.modv2nexus),$LOCALIZE[24051] ]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1148,7 +1146,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$INFO[System.KernelVersion]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1162,7 +1160,7 @@
 								<font>font36_title</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 								<label>[UPPERCASE]• $LOCALIZE[130] •[/UPPERCASE]</label>
 								<scroll>true</scroll>
@@ -1176,7 +1174,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[13287] $INFO[System.ScreenResolution]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1189,7 +1187,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[12390]: [LOWERCASE]$INFO[System.Uptime][/LOWERCASE]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1202,7 +1200,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[12394]: [LOWERCASE]$INFO[System.TotalUptime][/LOWERCASE]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1215,7 +1213,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[150]: $INFO[Network.IPAddress] [B]-[/B] $LOCALIZE[149]: $INFO[Network.MACAddress] [B]-[/B] $INFO[Network.LinkState]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1228,7 +1226,7 @@
 								<font>font36_title</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 								<label>[UPPERCASE]• $LOCALIZE[31322] •[/UPPERCASE]</label>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1241,7 +1239,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[13271] $INFO[System.CPUUsage] [B]-[/B] $INFO[System.CPUTemperature]</label>
 								<scroll>true</scroll>
 								<visible>Integer.IsGreaterOrEqual()(System.CPUTemperature,1)</visible>
@@ -1255,7 +1253,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 								<scroll>true</scroll>
 								<visible>Integer.IsEqual(System.CPUTemperature,0)</visible>
@@ -1278,7 +1276,7 @@
 								<font>font14</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[31030] : $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)] [LOWERCASE]$LOCALIZE[20162][/LOWERCASE]</label>
 								<scroll>true</scroll>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1300,7 +1298,7 @@
 								<font>font36_title</font>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<textcolor>$VAR[SkinColorVar]</textcolor>
 								<label>[UPPERCASE]• $LOCALIZE[31157] •[/UPPERCASE]</label>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1312,7 +1310,7 @@
 								<height>100</height>
 								<left>20</left>
 								<right>20</right>
-								<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+								<shadowcolor>text_shadow</shadowcolor>
 								<label>$LOCALIZE[31460]</label>
 								<animation effect="slide" end="-250,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + !Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
 								<animation effect="slide" end="-67,0" time="300" tween="sine" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus] + Skin.HasSetting(HideMainMenuWithWidgets) + Skin.HasSetting(MinimizeMainMenu)">Conditional</animation>
@@ -1345,22 +1343,22 @@
 								</control>
 							</control>
 							<control type="group">
-								<width>300</width>
-								<visible>Library.HasContent(tvshows)</visible>
-								<control type="image">
-									<centerleft>50%</centerleft>
-									<width>100</width>
-									<height>100</height>
-									<texture>DefaultTVShows.png</texture>
-								</control>
-								<control type="label">
-									<top>80</top>
-									<label>[B]$INFO[Window(Home).Property(Tvshows.Count),, $LOCALIZE[20343]][CR]$INFO[Window(Home).Property(Tvshows.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Tvshows.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
-									<font>font12</font>
-									<align>center</align>
-									<scroll>true</scroll>
-								</control>
-							</control>
+ 								<width>300</width>
+ 								<visible>Library.HasContent(tvshows)</visible>
+ 								<control type="image">
+ 									<centerleft>50%</centerleft>
+ 									<width>100</width>
+ 									<height>100</height>
+ 									<texture>DefaultTVShows.png</texture>
+ 								</control>
+ 								<control type="label">
+ 									<top>80</top>
+ 									<label>[B]$INFO[Window(Home).Property(Tvshows.Count),, $LOCALIZE[20343]][CR]$INFO[Window(Home).Property(Tvshows.Watched),$LOCALIZE[16102] : ,][CR]$INFO[Window(Home).Property(Tvshows.UnWatched),$LOCALIZE[16101] : ,][/B]</label>
+ 									<font>font12</font>
+ 									<align>center</align>
+ 									<scroll>true</scroll>
+ 								</control>
+ 							</control>
 							<control type="group">
 								<width>300</width>
 								<visible>Library.HasContent(tvshows)</visible>
@@ -1601,6 +1599,7 @@
 					<bottom>-10</bottom>
 					<focusposition>0</focusposition>
 					<onfocus>ClearProperty(listposition,home)</onfocus>
+					<onfocus>ClearProperty(SkinHelper.WidgetContainer,home)</onfocus>
 					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),DiscWidget)">21000</onright>
 					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),MoviesWidget)">5000</onright>
 					<onright condition="String.IsEqual(Container(9000).ListItem.Property(widget),TVShowsWidget)">6000</onright>
@@ -1687,7 +1686,7 @@
 							<top>0</top>
 							<width>95</width>
 							<height>85</height>
-							<aspectratio>scale</aspectratio>
+ 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 							<include>Animation_FocusBounce_Home</include>
 							<visible>ControlGroup(700).HasFocus</visible>
@@ -1700,7 +1699,7 @@
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<shadowcolor>text_shadow</shadowcolor>
 							<scroll>true</scroll>
 							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 						</control>
@@ -1711,7 +1710,7 @@
 							<top>0</top>
 							<width>95</width>
 							<height>85</height>
-							<aspectratio>scale</aspectratio>
+ 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="44FFFFFF">$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
@@ -1722,7 +1721,7 @@
 							<aligny>center</aligny>
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<shadowcolor>text_shadow</shadowcolor>
 							<visible>!Skin.HasSetting(MinimizeMainMenu)</visible>
 						</control>
 					</itemlayout>
@@ -1881,7 +1880,7 @@
 					</control>
 					<control type="image">
 						<left>74</left>
-						<top>199</top>
+						<top>214</top>
 						<width>14</width>
 						<height>14</height>
 						<texture colordiffuse="$VAR[SkinColorVar]">overlays/arrowright.png</texture>
@@ -2055,7 +2054,7 @@
 			<control type="group">
 				<depth>DepthBars</depth>
 				<bottom>0</bottom>
-				<height>55</height>
+				<height>70</height>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -2070,15 +2069,15 @@
 				<control type="rss">
 					<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 					<left>0</left>
-					<bottom>5</bottom>
-					<height>35</height>
+					<bottom>0</bottom>
+					<height>39</height>
 					<width>100%</width>
 					<font>font12</font>
 					<urlset>1</urlset>
 					<hitrect x="-100" y="0" w="1" h="1" />
 					<textcolor>$VAR[SkinColorVar]</textcolor>
 					<titlecolor>$VAR[SkinColorVar]</titlecolor>
-					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 					<headlinecolor>FFC0C0C0</headlinecolor>
 					<visible>Skin.HasSetting(hide_mediaflags) | !ControlGroup(2000).HasFocus</visible>
 					<animation effect="fade" time="300">VisibleChange</animation>

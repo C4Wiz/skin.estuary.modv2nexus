@@ -4,6 +4,18 @@
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
 		<include>DefaultBackground</include>
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<texture colordiffuse="$VAR[Background_Opacity]">$VAR[AddonsFanartVar]</texture>
+			<visible>!Player.HasMedia + Skin.HasSetting(show_fanart)</visible>
+		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="400">
@@ -125,7 +137,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95" width="462">
@@ -136,7 +148,7 @@
 							<aligny>center</aligny>
 							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
-							<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -302,7 +314,7 @@
 					<align>center</align>
 					<font>font32_title</font>
 					<label>$INFO[System.AddonUpdateCount]</label>
-					<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+					<shadowcolor>text_shadow</shadowcolor>
 				</control>
 			</control>
 			<control type="group">
@@ -342,7 +354,7 @@
 						<align>center</align>
 						<font>font32_title</font>
 						<label>$VAR[AddonCountLabel]</label>
-						<shadowcolor>$VAR[ShadowColorVar]</shadowcolor>
+						<shadowcolor>text_shadow</shadowcolor>
 						<visible>Control.HasFocus(802)</visible>
 					</control>
 					<control type="image">

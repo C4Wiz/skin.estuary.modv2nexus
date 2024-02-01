@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Estuary MOD v2
 # Addon id: skin.estuary.modv2
-# Addon Provider: Guilouz, PvD
+# Addon Provider: Guilouz
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -1172,6 +1172,11 @@ msgstr "Следующая серия"
 msgctxt "#31276"
 msgid "Disable zoom effect"
 msgstr "Отключить эффект увеличения"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31277"
+msgid "Hide notification popup during playback"
+msgstr "Скрывать всплывающие сообщения во время воспроизведения"
 
 #: /xml/SkinSettings.xml
 msgctxt "#31278"
