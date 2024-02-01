@@ -36,6 +36,9 @@ supports animated poster only.
 
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
+- +1.6
+  * Fix MediaFlagOSD showing Blu-ray logo when file is a Web-DL Regression
+
 - +1.5
   * Fix MediaFlagOSD HDR10/HDR10+ Regression
 
