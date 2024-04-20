@@ -4637,7 +4637,7 @@
 				<include content="MediaFlagOSD">
 					<param name="texture" value="flags/bluray.png" />
 					<param name="width" value="58" />
-					<param name="visible" value="[!String.Contains(Player.Filenameandpath,web-dl) | !String.Contains(Player.Filenameandpath,webdl) + String.Contains(Player.Filenameandpath,1080P) | String.Contains(Player.Filenameandpath,2160P) | String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,BLURAY) | String.Contains(Player.Filenameandpath,BLU-RAY) | String.Contains(Player.Filenameandpath,BDRIP)] + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="visible" value="![String.Contains(Player.Filenameandpath,web-dl) | String.Contains(Player.Filenameandpath,webdl) | String.Contains(Player.Filenameandpath,web)] + [String.Contains(Player.Filenameandpath,1080P) | String.Contains(Player.Filenameandpath,2160P) | String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip)] + !Window.IsVisible(MusicVisualisation.xml)" />
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$VAR[VideoPlayer3DFlagVar]" />
@@ -4655,7 +4655,8 @@
 				</include>
 				<include content="MediaFlagOSD">
 					<param name="texture" value="$VAR[HdrTypeVar]" />
-					<param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !Window.IsVisible(MusicVisualisation.xml)" />
+					<param name="visible" value="!String.Contains(Player.Filenameandpath,1080P) + !Window.IsVisible(MusicVisualisation.xml)" />
+					<!--param name="visible" value="!String.IsEmpty(VideoPlayer.HdrType) + !Window.IsVisible(MusicVisualisation.xml)" /-->
 					<param name="visible2" value="!Skin.HasSetting(show_mediacolordepthflag)" />
 					<param name="width" value="94" />
 				</include>
