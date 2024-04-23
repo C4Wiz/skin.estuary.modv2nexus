@@ -34,6 +34,14 @@ supports animated poster only.
 
 ![](resources/setup_ap.png)
 
+### Renamer settings for TinyMediaManager ###
+
+# MOVIES #
+${title}${-,edition,} (${year})${if movie.mediaInfoAudioCodec = "TrueHD/Atmos"}_Atmos${else}_${AudioCodec}${end}.AR${aspectRatio}.${if movie.videoHDRFormat = "HDR10+"}HDR10+${else}${if movie.videoHDRFormat = "HDR10+, HDR10"}HDR10+${else}${if movie.videoHDRFormat = "HDR10"}HDR10${else}${if movie.videoHDRFormat = "Dolby Vision"}DV${else}${if movie.videoHDRFormat = "Dolby Vision, HDR10"}DV${else}${if movie.videoHDRFormat = "Dolby Vision, HDR10+"}DV${else}${if movie.videoHDRFormat = "Dolby Vision, HDR10+, HDR10"}DV${end}${end}${end}${end}${end}${end}${end}
+
+# TV SHOWS #
+${showTitle} S${seasonNr2}.E${episodeNr2}-${title}${if episode.mediaInfoAudioCodec = "TrueHD/Atmos"}_Atmos.${else}${if episode.mediaInfoAudioCodec = "EAC3/Atmos"}_Atmos.${else}_${audioCodec}.${end}${end}AR${aspectRatio}.${if episode.videoHDRFormat = "HDR10+"}HDR10+.${else}${if episode.videoHDRFormat = "HDR10+, HDR10"}HDR10+.${else}${if episode.videoHDRFormat = "HDR10"}HDR10.${else}${if episode.videoHDRFormat = "Dolby Vision"}DV.${else}${if episode.videoHDRFormat = "Dolby Vision, HDR10"}DV.${else}${if episode.videoHDRFormat = "Dolby Vision, HDR10+, HDR10"}DV.${end}${end}${end}${end}${end}${end}${if episode.mediaSource = "Web-DL"}Web-DL${end}
+
 ### Modifications made to this Skin ###
 -------------------------------------------------------------------------------------------
 - +1.7
@@ -83,6 +91,10 @@ supports animated poster only.
   * Replaced the word PLOT with the actual Title Name for full screen plot
 --------------------------------------------------------------------------------------------
 ### 4.1.2 ###
+- .8
+   * VideoAspect Ratio by file naming only 
+   * Aspect Ratio on Video Player OSD only    
+
 - .7
    * revert back extra info on cast list
    * fix wrong actors list showing on movies with same titles but different year

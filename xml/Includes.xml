@@ -1052,7 +1052,7 @@
 						<param name="top" value="5" />
 					</include>
 				</control>
-				<control type="group">
+				<!--control type="group">
 					<width>108</width>
 					<visible>!Skin.HasSetting(show_mediaaspectratioflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)</visible>
 					<include content="MediaFlag">
@@ -1061,7 +1061,7 @@
 						<param name="width" value="108" />
 						<param name="top" value="5" />
 					</include>
-				</control>
+				</control-->
 				<control type="group">
 					<width>130</width>
 					<visible>!Skin.HasSetting(show_mediaaudiocodecflag) + !String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)</visible>
@@ -1722,14 +1722,14 @@
 					<param name="width" value="115" />
 					<param name="top" value="5" />
 				</include>
-				<include content="MediaFlag">
+				<!--include content="MediaFlag">
 					<param name="texture" value="$INFO[$PARAM[infolabel_prefix]ListItem.VideoAspect,flags/aspectratio/,.png]" />
 					<param name="fallback" value="flags/aspectratio/fallback.png" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.VideoAspect)" />
 					<param name="visible2" value="!Skin.HasSetting(show_mediaaspectratioflag)" />
 					<param name="width" value="108" />
 					<param name="top" value="5" />
-				</include>
+				</include-->
 				<include content="MediaFlag">
 					<param name="texture" value="$PARAM[audiocodec_var]" />
 					<param name="visible" value="!String.IsEmpty($PARAM[infolabel_prefix]ListItem.AudioCodec)" />
@@ -4661,7 +4661,7 @@
 					<param name="width" value="94" />
 				</include>
 				<include content="MediaFlagOSD">
-					<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
+					<param name="texture" value="$VAR[PlayerAspectVar]" />
 					<param name="fallback" value="flags/aspectratio/fallback.png" />
 					<param name="width" value="86" />
 					<param name="visible" value="!Window.IsVisible(MusicVisualisation.xml)" />

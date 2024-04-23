@@ -1511,6 +1511,21 @@
 		<value condition="String.Contains(Container(5084).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5084).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 		<value condition="String.Contains(Container(5094).ListItem.Filenameandpath,.dv.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dovi.) | String.Contains(Container(5094).ListItem.Filenameandpath,.dolbyvision.)">flags/videoresolution/dolbyvision.png</value>
 	</variable>
+	<!-- AspectRatio from File Name -->
+	<variable name="PlayerAspectVar">
+		<value condition="String.Contains(Player.Filenameandpath,AR133)">flags/aspectratio/1.33.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR137)">flags/aspectratio/1.37.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR166)">flags/aspectratio/1.66.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR178)">flags/aspectratio/1.78.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR185)">flags/aspectratio/1.85.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR200)">flags/aspectratio/2.00.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR220)">flags/aspectratio/2.20.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR235)">flags/aspectratio/2.35.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR239)">flags/aspectratio/2.39.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR240)">flags/aspectratio/2.40.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR255)">flags/aspectratio/2.55.png</value>
+        <value condition="String.Contains(Player.Filenameandpath,AR276)">flags/aspectratio/2.76.png</value>
+	</variable>
 	<variable name="3DFlagVar">
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.mvc)">flags/videoresolution/3Dmvc.png</value>
 		<value condition="String.Contains(ListItem.Filenameandpath,3d.sbs)">flags/videoresolution/3Dsbs.png</value>
